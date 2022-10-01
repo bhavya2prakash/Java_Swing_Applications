@@ -4,6 +4,9 @@
  */
 package model;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author BHAVYA PRAKASH
@@ -20,6 +23,9 @@ public class Employee {
     private String positionTitle;
     private int cellPhoneNumber;
     private String email;
+    private ImageIcon employeePhoto;
+
+    
 
     public String getName() {
         return name;
@@ -27,6 +33,7 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+
     }
 
     public String getEmployeeId() {
@@ -101,7 +108,14 @@ public class Employee {
         this.email = email;
     }
 
-    
+    public ImageIcon getEmployeePhoto() {
+        return employeePhoto;
+    }
+
+    public void setEmployeePhoto(ImageIcon employeePhoto) {
+        this.employeePhoto = employeePhoto;
+    }
+
     
     
 }
