@@ -116,6 +116,9 @@ public class Employee {
         this.employeePhoto = employeePhoto;
     }
 
-    
+    @Override
+    public String toString(){
+        return name;
+    }
     
 }

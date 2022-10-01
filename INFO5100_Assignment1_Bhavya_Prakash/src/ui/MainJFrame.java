@@ -34,6 +34,8 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanel = new javax.swing.JPanel();
         btnCreate = new javax.swing.JButton();
         btnView = new javax.swing.JButton();
+        btnViewFullProfile = new javax.swing.JButton();
+        btnUpdateProfile = new javax.swing.JButton();
         viewPanel = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
 
@@ -53,15 +55,36 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnViewFullProfile.setText("View Full Profile");
+        btnViewFullProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewFullProfileActionPerformed(evt);
+            }
+        });
+
+        btnUpdateProfile.setText("Update Profile");
+        btnUpdateProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateProfileActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout controlPanelLayout = new javax.swing.GroupLayout(controlPanel);
         controlPanel.setLayout(controlPanelLayout);
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCreate, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnView, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(controlPanelLayout.createSequentialGroup()
+                        .addComponent(btnViewFullProfile)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCreate, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnView, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnUpdateProfile, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         controlPanelLayout.setVerticalGroup(
@@ -71,7 +94,11 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnCreate)
                 .addGap(37, 37, 37)
                 .addComponent(btnView)
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(btnViewFullProfile)
+                .addGap(34, 34, 34)
+                .addComponent(btnUpdateProfile)
+                .addContainerGap(279, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -85,7 +112,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addGroup(viewPanelLayout.createSequentialGroup()
                 .addGap(277, 277, 277)
                 .addComponent(lbTitle)
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addContainerGap(259, Short.MAX_VALUE))
         );
         viewPanelLayout.setVerticalGroup(
             viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +128,7 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
+            .addComponent(splitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,6 +149,18 @@ public class MainJFrame extends javax.swing.JFrame {
         ViewJPanel viewPanel = new ViewJPanel(employeeList);
         splitPane.setRightComponent(viewPanel);
     }//GEN-LAST:event_btnViewActionPerformed
+
+    private void btnViewFullProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFullProfileActionPerformed
+        // TODO add your handling code here:
+         ViewFullProfileJPanel viewFullPanel = new ViewFullProfileJPanel(employeeList);
+        splitPane.setRightComponent(viewFullPanel);
+    }//GEN-LAST:event_btnViewFullProfileActionPerformed
+
+    private void btnUpdateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateProfileActionPerformed
+        // TODO add your handling code here:
+        UpdateJPanel updatePanel = new UpdateJPanel(employeeList);
+        splitPane.setRightComponent(updatePanel);
+    }//GEN-LAST:event_btnUpdateProfileActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,7 +199,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreate;
+    private javax.swing.JButton btnUpdateProfile;
     private javax.swing.JButton btnView;
+    private javax.swing.JButton btnViewFullProfile;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JSplitPane splitPane;
