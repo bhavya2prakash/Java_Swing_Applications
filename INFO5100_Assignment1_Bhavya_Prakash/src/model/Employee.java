@@ -4,8 +4,8 @@
  */
 package model;
 
+import java.util.Date;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +17,7 @@ public class Employee {
     private String employeeId;
     private int age;
     private String gender;
-    private String startDate;
+    private Date startDate;
     private int level;
     private String teamInfo;
     private String positionTitle;
@@ -60,11 +60,11 @@ public class Employee {
         this.gender = gender;
     }
 
-    public String getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 

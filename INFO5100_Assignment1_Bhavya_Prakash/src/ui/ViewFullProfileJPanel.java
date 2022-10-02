@@ -227,7 +227,7 @@ public class ViewFullProfileJPanel extends javax.swing.JPanel {
                lbEmployeeIdField.setText(em.getEmployeeId());
                lbAgeField.setText(String.valueOf(em.getAge()));
                lbGenderField.setText(em.getGender());
-               lbStartDateField.setText(em.getStartDate());
+               lbStartDateField.setText(String.valueOf(em.getStartDate()));
                lbLevelField.setText(String.valueOf(em.getLevel()));
                lbTeamInfoField.setText(em.getTeamInfo());
                lbPositionTitleField.setText(em.getPositionTitle());
