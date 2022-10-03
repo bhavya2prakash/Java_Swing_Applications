@@ -70,26 +70,39 @@ public class CreateJPanel extends javax.swing.JPanel {
         radioOther = new javax.swing.JRadioButton();
         startDateChooser = new com.toedter.calendar.JDateChooser();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        lbTitle.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
         lbTitle.setText("Create a new Employee");
 
+        lbName.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbName.setText("Name");
 
+        lbEmployeeId.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbEmployeeId.setText("Employee ID");
 
+        lbAge.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbAge.setText("Age");
 
+        lbGender.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbGender.setText("Gender");
 
+        lbStartDate.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbStartDate.setText("Start Date");
 
+        lbLevel.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbLevel.setText("Level");
 
+        lbTeamInfo.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbTeamInfo.setText("Team Info");
 
+        lbPositionTitle.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbPositionTitle.setText("Position Title");
 
+        lbPhoneNumber.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbPhoneNumber.setText("Phone number");
 
+        lbEmail.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         lbEmail.setText("Email ");
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -97,22 +110,45 @@ public class CreateJPanel extends javax.swing.JPanel {
                 txtNameActionPerformed(evt);
             }
         });
+        txtName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtNameKeyPressed(evt);
+            }
+        });
 
+        txtAge.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtAgeKeyPressed(evt);
+            }
+        });
+
+        txtPhoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPhoneNumberKeyPressed(evt);
+            }
+        });
+
+        btnSave.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         btnSave.setText("Save");
+        btnSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
 
-        btnUploadPhoto.setText("Choose File");
+        btnUploadPhoto.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        btnUploadPhoto.setText("Upload Photo");
+        btnUploadPhoto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnUploadPhoto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUploadPhoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUploadPhotoActionPerformed(evt);
             }
         });
 
-        cropImageJLabel.setText("Upload employe's photo");
+        cropImageJLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/profile-icon.jpg"))); // NOI18N
 
         genderGroup.add(radioMale);
         radioMale.setText("Male");
@@ -131,116 +167,122 @@ public class CreateJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(286, 286, 286)
-                .addComponent(lbTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(lbTitle))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbName)
                             .addComponent(lbEmployeeId)
                             .addComponent(lbAge)
+                            .addComponent(lbGender)
+                            .addComponent(lbStartDate)
+                            .addComponent(lbLevel)
                             .addComponent(lbTeamInfo)
                             .addComponent(lbPositionTitle)
                             .addComponent(lbPhoneNumber)
                             .addComponent(lbEmail))
-                        .addGap(115, 115, 115))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(lbGender)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(radioMale))
-                            .addComponent(lbLevel, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbStartDate, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtPhoneNumber)
-                        .addComponent(txtPositionTitle, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtTeamInfo, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtName, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtLevel)
-                        .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(radioFemale)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(radioOther))
-                    .addComponent(txtEmployeeId, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(startDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnUploadPhoto)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                        .addComponent(cropImageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(96, 96, 96))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSave)
-                .addGap(314, 314, 314))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtName)
+                            .addComponent(txtEmployeeId, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                            .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLevel)
+                            .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(radioMale)
+                                .addGap(18, 18, 18)
+                                .addComponent(radioFemale)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radioOther))
+                            .addComponent(startDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                            .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(cropImageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUploadPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(11, 11, 11)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lbAge, lbEmail, lbEmployeeId, lbGender, lbLevel, lbName, lbPhoneNumber, lbPositionTitle, lbStartDate, lbTeamInfo});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {startDateChooser, txtAge, txtEmail, txtEmployeeId, txtLevel, txtName, txtPhoneNumber, txtPositionTitle, txtTeamInfo});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(20, 20, 20)
                 .addComponent(lbTitle)
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbName)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addGap(23, 23, 23)
+                        .addComponent(cropImageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnUploadPhoto))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbEmployeeId)
-                            .addComponent(txtEmployeeId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbName))
+                                .addGap(18, 18, 18)
+                                .addComponent(lbEmployeeId))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(txtEmployeeId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lbAge)
                             .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbGender)
                             .addComponent(radioMale)
                             .addComponent(radioFemale)
-                            .addComponent(radioOther)))
-                    .addComponent(cropImageJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lbStartDate)
-                        .addComponent(btnUploadPhoto))
-                    .addComponent(startDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbLevel)
-                    .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTeamInfo)
-                    .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbPositionTitle)
-                    .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbPhoneNumber)
-                    .addComponent(txtPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(btnSave)
-                .addContainerGap(41, Short.MAX_VALUE))
+                            .addComponent(radioOther))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbStartDate)
+                            .addComponent(startDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbLevel)
+                            .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbTeamInfo)
+                            .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbPositionTitle)
+                            .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbPhoneNumber))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbEmail))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSave)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lbAge, lbEmail, lbEmployeeId, lbGender, lbLevel, lbName, lbPhoneNumber, lbPositionTitle, lbStartDate, lbTeamInfo});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {startDateChooser, txtAge, txtEmail, txtEmployeeId, txtLevel, txtName, txtPhoneNumber, txtPositionTitle, txtTeamInfo});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
@@ -257,51 +299,72 @@ public class CreateJPanel extends javax.swing.JPanel {
             
             try{
             String name = txtName.getText();
-            if(name.length()==0){
-             JOptionPane.showMessageDialog(this,"Name error");
+            if(name.length()==0 || !validation(name,"^(?![\\s.]+$)[a-zA-Z\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Name");
              return;
             }
             String employeeId = txtEmployeeId.getText();
-            if(employeeId.length()==0){
-             JOptionPane.showMessageDialog(this,"EmployeeId error");
+            if(employeeId.length()==0 || !validation(employeeId,"^(?![\\s.]+$)[a-zA-Z0-9\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Employee Id. Can contain only alphabets and numbers.");
              return;
             }
             int age = Integer.parseInt(txtAge.getText());
-            radioMale.setActionCommand("Male");
-            radioFemale.setActionCommand("Female");
-            radioOther.setActionCommand("Other");
-            String gender = genderGroup.getSelection().getActionCommand();
-             if(gender == null){
-             JOptionPane.showMessageDialog(this,"gender error");
+            if(!(age >= 18 && age <= 65)){
+             JOptionPane.showMessageDialog(this,"Invalid Age. Age should be between 18 to 65"); 
+             return;
+            }
+            String gender;
+            if(radioMale.isSelected()){
+                    gender = "Male";
+                }
+             else if (radioFemale.isSelected()){
+                   gender = "Female";
+                }
+             else if(radioOther.isSelected()){
+                    gender = "Other";
+                }
+             else {
+                 gender = "";
+             }
+             if(gender.length()==0 ){
+             JOptionPane.showMessageDialog(this,"Invalid Gender ");
              return;
             }
             Date startDate = startDateChooser.getDate();
              if(startDate==null){
-             JOptionPane.showMessageDialog(this,"startDate error");
+             JOptionPane.showMessageDialog(this,"Invalid Date");
              return;
             }
-            int level = Integer.parseInt(txtLevel.getText());
+            String level = txtLevel.getText();
+            if(level.length()==0 || !validation(level,"^(?![\\s.]+$)[a-zA-Z0-9\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Level. Can contain only alphabets and numbers");
+             return;
+            }
             String teamInfo = txtTeamInfo.getText();
-             if(teamInfo.length()==0){
-             JOptionPane.showMessageDialog(this,"teamInfo");
+             if(teamInfo.length()==0 || !validation(teamInfo,"^(?![\\s.]+$)[a-zA-Z0-9\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Team Info");
              return;
             }
             String positionTitle = txtPositionTitle.getText();
-             if(positionTitle.length()==0){
-             JOptionPane.showMessageDialog(this,"positionTitle error");
+             if(positionTitle.length()==0 || !validation(positionTitle,"^(?![\\s.]+$)[a-zA-Z0-9\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Position Title. Can contain only alphabets and numbers");
              return;
             }
-            int cellPhoneNumber = Integer.parseInt(txtPhoneNumber.getText());
+            String cellPhoneNumber = txtPhoneNumber.getText();
             
+            if(!validation(cellPhoneNumber,"^\\d{10}$")){
+             JOptionPane.showMessageDialog(this,"Invalid Phone Number");
+             return;
+            }
             String email = txtEmail.getText();
             
              if(email.length()==0 || !validation(email,"^(.+)@(\\S+)$")){
-             JOptionPane.showMessageDialog(this,"email error");
+             JOptionPane.showMessageDialog(this,"Invalid Email");
              return;
             }
              
             if(imgFinal == null){
-              JOptionPane.showMessageDialog(this,"photo error");
+              JOptionPane.showMessageDialog(this,"Invalid Photo");
              return;  
             }
             
@@ -325,17 +388,17 @@ public class CreateJPanel extends javax.swing.JPanel {
             txtEmployeeId.setText("");
             txtAge.setText("");
             genderGroup.clearSelection();
-            startDateChooser.setDateFormatString("");
+            startDateChooser.setCalendar(null);
             txtLevel.setText("");
             txtTeamInfo.setText("");
             txtPositionTitle.setText("");
             txtPhoneNumber.setText("");
             txtEmail.setText("");
-            cropImageJLabel.setText("");
+            cropImageJLabel.setIcon(new ImageIcon(getClass().getResource("/ui/profile-icon.jpg")));
             
             }
             catch (Exception e){
-                JOptionPane.showMessageDialog(null, "Error creating employee");
+                JOptionPane.showMessageDialog(null, "Invalid Input. Error creating new employee");
             }
             
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -346,14 +409,55 @@ public class CreateJPanel extends javax.swing.JPanel {
             chooser.showOpenDialog(null);
             File image=chooser.getSelectedFile();
             String fName=image.getAbsolutePath();
-            ImageIcon imgIcon=new ImageIcon(fName);        
+            ImageIcon imgIcon=new ImageIcon(fName);  
+            if(fName.toLowerCase().endsWith(".jpg") || fName.toLowerCase().endsWith(".jpeg")){
             Image img=imgIcon.getImage();
             Image pic=img.getScaledInstance(cropImageJLabel.getWidth(), cropImageJLabel.getHeight(), SCALE_SMOOTH);
              imgFinal=new ImageIcon(pic);
             //picTxtFld.setText(fName);
             //request.setImgIcon(imgFinal);
             cropImageJLabel.setIcon(imgFinal);
+            }
+            else{
+             JOptionPane.showMessageDialog(this, "Invalid File. Upload a jpeg/jpg file");   
+            }
     }//GEN-LAST:event_btnUploadPhotoActionPerformed
+
+    private void txtNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyPressed
+        // TODO add your handling code here:
+        
+        char c = evt.getKeyChar();
+        if (Character.isDigit(c)){
+            txtName.setEditable(false);
+        }
+        else{
+            txtName.setEditable(true);
+        }
+        
+    }//GEN-LAST:event_txtNameKeyPressed
+
+    private void txtAgeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgeKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (Character.isLetter(c)){
+            txtAge.setEditable(false);
+        }
+        else{
+            txtAge.setEditable(true);
+        }
+
+    }//GEN-LAST:event_txtAgeKeyPressed
+
+    private void txtPhoneNumberKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhoneNumberKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (Character.isLetter(c)){
+            txtPhoneNumber.setEditable(false);
+        }
+        else{
+            txtPhoneNumber.setEditable(true);
+        }
+    }//GEN-LAST:event_txtPhoneNumberKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

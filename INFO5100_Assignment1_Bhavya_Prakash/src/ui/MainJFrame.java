@@ -33,39 +33,47 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPane = new javax.swing.JSplitPane();
         controlPanel = new javax.swing.JPanel();
         btnCreate = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
-        btnViewFullProfile = new javax.swing.JButton();
-        btnUpdateProfile = new javax.swing.JButton();
-        viewPanel = new javax.swing.JPanel();
-        lbTitle = new javax.swing.JLabel();
+        btnSearchAll = new javax.swing.JButton();
+        btnManage = new javax.swing.JButton();
+        displayPanel = new javax.swing.JPanel();
+        mainPageIcon = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnCreate.setText("Create");
+        splitPane.setBackground(new java.awt.Color(255, 255, 255));
+        splitPane.setDividerLocation(200);
+
+        controlPanel.setBackground(new java.awt.Color(153, 204, 255));
+
+        btnCreate.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        btnCreate.setText("Create Employee");
+        btnCreate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnCreate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
             }
         });
 
-        btnView.setText("View");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btnSearchAll.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        btnSearchAll.setText("Employee Directory");
+        btnSearchAll.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSearchAll.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSearchAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnSearchAllActionPerformed(evt);
             }
         });
 
-        btnViewFullProfile.setText("View Full Profile");
-        btnViewFullProfile.addActionListener(new java.awt.event.ActionListener() {
+        btnManage.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        btnManage.setText("Edit Employee Profile");
+        btnManage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnManage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewFullProfileActionPerformed(evt);
-            }
-        });
-
-        btnUpdateProfile.setText("Update Profile");
-        btnUpdateProfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateProfileActionPerformed(evt);
+                btnManageActionPerformed(evt);
             }
         });
 
@@ -75,60 +83,59 @@ public class MainJFrame extends javax.swing.JFrame {
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(controlPanelLayout.createSequentialGroup()
-                        .addComponent(btnViewFullProfile)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCreate, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnView, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnUpdateProfile, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap())
+                .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSearchAll)
+                    .addComponent(btnManage, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
+
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCreate, btnManage, btnSearchAll});
+
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(btnCreate)
-                .addGap(37, 37, 37)
-                .addComponent(btnView)
-                .addGap(41, 41, 41)
-                .addComponent(btnViewFullProfile)
-                .addGap(34, 34, 34)
-                .addComponent(btnUpdateProfile)
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addGap(170, 170, 170)
+                .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnSearchAll)
+                .addGap(18, 18, 18)
+                .addComponent(btnManage)
+                .addContainerGap(270, Short.MAX_VALUE))
         );
+
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreate, btnManage, btnSearchAll});
 
         splitPane.setLeftComponent(controlPanel);
 
-        lbTitle.setText("HR Employee Management System");
+        displayPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout viewPanelLayout = new javax.swing.GroupLayout(viewPanel);
-        viewPanel.setLayout(viewPanelLayout);
-        viewPanelLayout.setHorizontalGroup(
-            viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(viewPanelLayout.createSequentialGroup()
-                .addGap(277, 277, 277)
-                .addComponent(lbTitle)
-                .addContainerGap(259, Short.MAX_VALUE))
+        mainPageIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/mainpageimage.png"))); // NOI18N
+
+        javax.swing.GroupLayout displayPanelLayout = new javax.swing.GroupLayout(displayPanel);
+        displayPanel.setLayout(displayPanelLayout);
+        displayPanelLayout.setHorizontalGroup(
+            displayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(displayPanelLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(mainPageIcon)
+                .addContainerGap(223, Short.MAX_VALUE))
         );
-        viewPanelLayout.setVerticalGroup(
-            viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(viewPanelLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(lbTitle)
-                .addContainerGap(429, Short.MAX_VALUE))
+        displayPanelLayout.setVerticalGroup(
+            displayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(displayPanelLayout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(mainPageIcon)
+                .addContainerGap(196, Short.MAX_VALUE))
         );
 
-        splitPane.setRightComponent(viewPanel);
+        splitPane.setRightComponent(displayPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 873, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,25 +149,20 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         CreateJPanel createPanel = new CreateJPanel(employeeList);
         splitPane.setRightComponent(createPanel);
+            
     }//GEN-LAST:event_btnCreateActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnSearchAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchAllActionPerformed
         // TODO add your handling code here:
-        ViewJPanel viewPanel = new ViewJPanel(employeeList);
-        splitPane.setRightComponent(viewPanel);
-    }//GEN-LAST:event_btnViewActionPerformed
+        ViewJPanel searchPanel = new ViewJPanel(employeeList);
+        splitPane.setRightComponent(searchPanel);
+    }//GEN-LAST:event_btnSearchAllActionPerformed
 
-    private void btnViewFullProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFullProfileActionPerformed
-        // TODO add your handling code here:
-         ViewFullProfileJPanel viewFullPanel = new ViewFullProfileJPanel(employeeList);
-        splitPane.setRightComponent(viewFullPanel);
-    }//GEN-LAST:event_btnViewFullProfileActionPerformed
-
-    private void btnUpdateProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateProfileActionPerformed
+    private void btnManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageActionPerformed
         // TODO add your handling code here:
         UpdateJPanel updatePanel = new UpdateJPanel(employeeList);
         splitPane.setRightComponent(updatePanel);
-    }//GEN-LAST:event_btnUpdateProfileActionPerformed
+    }//GEN-LAST:event_btnManageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,15 +198,16 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreate;
-    private javax.swing.JButton btnUpdateProfile;
-    private javax.swing.JButton btnView;
-    private javax.swing.JButton btnViewFullProfile;
+    private javax.swing.JButton btnManage;
+    private javax.swing.JButton btnSearchAll;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JLabel lbTitle;
+    private javax.swing.JPanel displayPanel;
+    private javax.swing.JLabel mainPageIcon;
     private javax.swing.JSplitPane splitPane;
-    private javax.swing.JPanel viewPanel;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,10 +18,10 @@ public class Employee {
     private int age;
     private String gender;
     private Date startDate;
-    private int level;
+    private String level;
     private String teamInfo;
     private String positionTitle;
-    private int cellPhoneNumber;
+    private String cellPhoneNumber;
     private String email;
     private ImageIcon employeePhoto;
 
@@ -68,11 +68,11 @@ public class Employee {
         this.startDate = startDate;
     }
 
-    public int getLevel() {
+    public String getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(String level) {
         this.level = level;
     }
 
@@ -92,11 +92,11 @@ public class Employee {
         this.positionTitle = positionTitle;
     }
 
-    public int getCellPhoneNumber() {
+    public String getCellPhoneNumber() {
         return cellPhoneNumber;
     }
 
-    public void setCellPhoneNumber(int cellPhoneNumber) {
+    public void setCellPhoneNumber(String cellPhoneNumber) {
         this.cellPhoneNumber = cellPhoneNumber;
     }
 
