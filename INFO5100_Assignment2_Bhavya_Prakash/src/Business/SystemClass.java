@@ -13,11 +13,21 @@ public class SystemClass {
     CityCatalogue cityList;
     PatientDirectory patientList;
     PersonDirectory personList;
+    DoctorDirectory doctorList;
 
     public SystemClass() {
         cityList = new CityCatalogue();
         patientList = new PatientDirectory();
         personList = new PersonDirectory();
+        doctorList = new DoctorDirectory();
+    }
+
+    public DoctorDirectory getDoctorList() {
+        return doctorList;
+    }
+
+    public void setDoctorList(DoctorDirectory doctorList) {
+        this.doctorList = doctorList;
     }
 
     public CityCatalogue getCityList() {

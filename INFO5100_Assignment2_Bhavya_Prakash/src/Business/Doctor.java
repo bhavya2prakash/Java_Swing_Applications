@@ -10,7 +10,19 @@ package Business;
  */
 public class Doctor {
      private Person person;
-     private String name;
+     private Patient patient;
+    
+    public Doctor(Person person) {
+        this.person = person;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
 
     public Person getPerson() {
         return person;
@@ -20,16 +32,10 @@ public class Doctor {
         this.person = person;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    
     @Override
     public String toString(){
-        return name;
+        return this.person.getPersonName();
     }
      
 }

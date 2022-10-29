@@ -19,6 +19,10 @@ public class Person {
     private String personContactEmail;
     private String personInsurance;
     private String personAddress;
+    private House house;
+    private Date personDOB;
+    private String username;
+    private String password;
 
     public String getPersonAddress() {
         return personAddress;
@@ -27,10 +31,7 @@ public class Person {
     public void setPersonAddress(String personAddress) {
         this.personAddress = personAddress;
     }
-    private House house;
-    private Date personDOB;
-    private String username;
-    private String password;
+    
 
     public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, String personInsurance, House house, Date personDOB, String username, String password) {
         this.personName = personName;
@@ -43,6 +44,20 @@ public class Person {
         this.personDOB = personDOB;
         this.username = username;
         this.password = password;
+    }
+
+    public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, Date personDOB, String username, String password) {
+        this.personName = personName;
+        this.personAge = personAge;
+        this.personGender = personGender;
+        this.personContactNo = personContactNo;
+        this.personContactEmail = personContactEmail;
+        this.personDOB = personDOB;
+        this.username = username;
+        this.password = password;
+        this.personInsurance = "not needed";
+        this.house = new House();
+        
     }
 
     public String getPersonName() {

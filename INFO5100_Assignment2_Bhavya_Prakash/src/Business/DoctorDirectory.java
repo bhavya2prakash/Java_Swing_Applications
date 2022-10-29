@@ -26,8 +26,8 @@ public class DoctorDirectory {
     }
 
     
-    public Doctor addNewDoctor(){
-        Doctor newDoctor = new Doctor();
+    public Doctor addNewDoctor(Doctor newDoctor){
+        
         doctorList.add(newDoctor);
         return newDoctor;
     }

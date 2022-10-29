@@ -39,8 +39,13 @@ public class Hospital {
     public void setHospitalName(String hospitalName) {
         this.hospitalName = hospitalName;
     }
-
-   
+    public void addDoctorHospital (Doctor doctor){
+        doctorList.addNewDoctor(doctor);
+    }
+    public void deleteDoctorHospital (Doctor doctor){
+        doctorList.deleteDoctor(doctor);
+    }
+    
     @Override
     public String toString(){
         return hospitalName;
