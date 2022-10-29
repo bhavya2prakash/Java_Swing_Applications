@@ -9,5 +9,5 @@ package Business;
  * @author BHAVYA PRAKASH
  */
 public class Encounter {
-    
+    private VitalSigns viatlSigns; 
 }

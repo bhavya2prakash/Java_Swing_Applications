@@ -10,6 +10,7 @@ import java.util.ArrayList;
  *
  * @author BHAVYA PRAKASH
  */
-public class EncounterCatalogue {
- private ArrayList<Encounter> encounterList ;   
+public class EncounterHistory {
+ private ArrayList<Encounter> encounterList ; 
+ 
 }

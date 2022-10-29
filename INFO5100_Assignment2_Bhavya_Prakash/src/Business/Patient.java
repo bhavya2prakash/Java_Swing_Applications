@@ -12,8 +12,7 @@ package Business;
  */
 public class Patient {
     private Person person;
-    private VitalSigns viatlSigns; 
-    private EncounterCatalogue encounterHistory;
+    private EncounterHistory encounterHistory;
 
     public Patient(Person person) {
         this.person = person;
@@ -27,19 +26,11 @@ public class Patient {
         this.person = person;
     }
 
-    public VitalSigns getViatlSigns() {
-        return viatlSigns;
-    }
-
-    public void setViatlSigns(VitalSigns viatlSigns) {
-        this.viatlSigns = viatlSigns;
-    }
-
-    public EncounterCatalogue getEncounterHistory() {
+    public EncounterHistory getEncounterHistory() {
         return encounterHistory;
     }
 
-    public void setEncounterHistory(EncounterCatalogue encounterHistory) {
+    public void setEncounterHistory(EncounterHistory encounterHistory) {
         this.encounterHistory = encounterHistory;
     }
     

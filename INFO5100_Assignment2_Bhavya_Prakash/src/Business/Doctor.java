@@ -10,19 +10,41 @@ package Business;
  */
 public class Doctor {
      private Person person;
-     private Patient patient;
-    
-    public Doctor(Person person) {
+     private String speciality;
+     private String degree;
+     private EncounterHistory encounterHistory;
+
+    public Doctor(Person person, String speciality, String degree) {
         this.person = person;
+        this.speciality = speciality;
+        this.degree = degree;
     }
 
-    public Patient getPatient() {
-        return patient;
+    public String getSpeciality() {
+        return speciality;
     }
 
-    public void setPatient(Patient patient) {
-        this.patient = patient;
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
+
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
+
+    public EncounterHistory getEncounterHistory() {
+        return encounterHistory;
+    }
+
+    public void setEncounterHistory(EncounterHistory encounterHistory) {
+        this.encounterHistory = encounterHistory;
+    }
+    
+    
 
     public Person getPerson() {
         return person;

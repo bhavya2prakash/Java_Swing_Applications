@@ -9,12 +9,12 @@ import java.util.ArrayList;
  *
  * @author BHAVYA PRAKASH
  */
-public class HospitalCatalogue {
+public class HospitalDirectory {
     
     private ArrayList<Hospital> hospitalList ;
 
 
-    public HospitalCatalogue() {
+    public HospitalDirectory() {
         this.hospitalList = new ArrayList<>();
     }
 

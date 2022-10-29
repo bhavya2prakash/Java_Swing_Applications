@@ -15,10 +15,10 @@ public class Community {
     private String communityName;
     private Admin communityadmin;
     private ArrayList<House> houseList = new ArrayList<House>();
-    private HospitalCatalogue hospitalList ;
+    private HospitalDirectory hospitalList ;
 
     public Community() {
-       this.hospitalList = new HospitalCatalogue();
+       this.hospitalList = new HospitalDirectory();
     }
 
     public Admin getCommunityadmin() {
@@ -63,11 +63,11 @@ public class Community {
         this.houseList.remove(house);
     }
 
-    public HospitalCatalogue getHospitalList() {
+    public HospitalDirectory getHospitalList() {
         return hospitalList;
     }
 
-    public void setHospitalList(HospitalCatalogue hospitalList) {
+    public void setHospitalList(HospitalDirectory hospitalList) {
         this.hospitalList = hospitalList;
     }
      
