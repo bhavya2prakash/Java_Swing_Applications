@@ -25,12 +25,12 @@ public class PersonDirectory {
         this.personList = personList;
     }
     
-//    public Person addNewPerson(){
-//        Person newPerson = new Person();
-//        personList.add(newPerson);
-//        return newPerson;
-//    }
-//    public void deletePerson(Person p){
-//        personList.remove(p);
-//    }
+    public void addNewPerson(Person person){
+        
+        personList.add(person);
+       
+    }
+    public void deletePerson(Person p){
+        personList.remove(p);
+    }
 }

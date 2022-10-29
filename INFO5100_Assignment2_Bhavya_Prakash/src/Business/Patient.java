@@ -4,68 +4,43 @@
  */
 package Business;
 
-import java.util.Date;
+
 
 /**
  *
  * @author BHAVYA PRAKASH
  */
 public class Patient {
-    private String name;
-    private int age;
-    private String gender;
-    private Date dob;
-    private String username;
-    private String password;
     private Person person;
+    private VitalSigns viatlSigns; 
+    private EncounterCatalogue encounterHistory;
 
-    public String getName() {
-        return name;
+    public Patient(Person person) {
+        this.person = person;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Person getPerson() {
+        return person;
     }
 
-    public int getAge() {
-        return age;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public VitalSigns getViatlSigns() {
+        return viatlSigns;
     }
 
-    public String getGender() {
-        return gender;
+    public void setViatlSigns(VitalSigns viatlSigns) {
+        this.viatlSigns = viatlSigns;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public EncounterCatalogue getEncounterHistory() {
+        return encounterHistory;
     }
 
-    public Date getDob() {
-        return dob;
+    public void setEncounterHistory(EncounterCatalogue encounterHistory) {
+        this.encounterHistory = encounterHistory;
     }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    
     
 }

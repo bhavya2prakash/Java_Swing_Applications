@@ -179,76 +179,123 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="patientGenderLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="maleRadio" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="femaleRadio" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="otherRadio" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="34" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="patientDOBLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="225" pref="225" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="patientHouseLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="patientPasswordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="patientUsernameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="patientDOBLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="patientRegisterBtn" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="patientSetUsernameTxtField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="patientSetPasswordTxtField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="patientDOB" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="patientCommunityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="patientAgeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="patientCityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="patientAgeTxtField" max="32767" attributes="0"/>
-                                  </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                                  <Component id="patientAgeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="patientNameLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="patientGenderLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="patientNameTxtField" min="-2" pref="207" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="maleRadio" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="femaleRadio" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="otherRadio" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="patientAgeTxtField" alignment="0" min="-2" pref="207" max="-2" attributes="0"/>
+                                      <Component id="patientDOB" min="-2" pref="242" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                      <Component id="cancelPatientRegistration" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="patientCommunityLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="communityComboBoxPatient" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="patientUsernameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="patientPasswordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="patientRegisterBtn" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace pref="116" max="32767" attributes="0"/>
+                                              <Component id="cancelPatientRegistration" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="patientSetUsernameTxtField" max="32767" attributes="0"/>
+                                          <Component id="patientSetPasswordTxtField" max="32767" attributes="0"/>
+                                          <Component id="patientConfirmsPasswordTxtField" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="patientHouseLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="houseComboBoxPatient" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="patientCityLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Component id="cityComboBoxPatient" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="patientPhoneLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="patientPhoneTxtField" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="patientConfirmPasswordLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="patientInsuranceLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="patientEmailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="patientEmailTxtField" max="32767" attributes="0"/>
+                                          <Component id="patientInsuranceTxtField" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="225" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="patientNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="patientNameTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="patientAgeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="patientAgeTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="patientGenderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="maleRadio" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -260,41 +307,63 @@
                           <Component id="patientDOBLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="patientDOB" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="patientCityLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="patientCommunityLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="patientHouseLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="patientUsernameLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="patientSetUsernameTxtField" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="patientPasswordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="patientSetPasswordTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientPhoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientPhoneTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="patientRegisterBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cancelPatientRegistration" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientEmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientEmailTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="patientInsuranceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientInsuranceTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="patientCityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cityComboBoxPatient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="patientCommunityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="communityComboBoxPatient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="patientHouseLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="houseComboBoxPatient" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="patientSetUsernameTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientUsernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="patientPasswordLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientSetPasswordTxtField" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="patientConfirmPasswordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientConfirmsPasswordTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="cancelPatientRegistration" min="-2" max="-2" attributes="0"/>
+                          <Component id="patientRegisterBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="54" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="patientSetPasswordTxtField">
-            </Component>
             <Component class="javax.swing.JTextField" name="patientNameTxtField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="patientCommunityLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Community"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="patientRegisterBtn">
               <Properties>
@@ -304,9 +373,9 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patientRegisterBtnActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="patientHouseLabel">
+            <Component class="javax.swing.JLabel" name="patientCityLabel">
               <Properties>
-                <Property name="text" type="java.lang.String" value="House"/>
+                <Property name="text" type="java.lang.String" value="Select your city"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="patientAgeTxtField">
@@ -362,11 +431,6 @@
                 <Property name="text" type="java.lang.String" value="Username"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="patientCityLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="City"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="patientPasswordLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password"/>
@@ -381,6 +445,103 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelPatientRegistrationActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="patientSetPasswordTxtField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="patientCommunityLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Select your community"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patientHouseLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Select your house"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cityComboBoxPatient">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cityComboBoxPatientActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="communityComboBoxPatient">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="communityComboBoxPatientActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="houseComboBoxPatient">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="houseComboBoxPatientActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patientConfirmPasswordLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Confirm Password"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="patientConfirmsPasswordTxtField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="patientEmailLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Contact Email"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patientPhoneTxtField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="patientPhoneLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Contact Number"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patientEmailTxtField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patientEmailTxtFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="patientInsuranceLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Health Insurance Plan"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="patientInsuranceTxtField">
             </Component>
           </SubComponents>
         </Container>

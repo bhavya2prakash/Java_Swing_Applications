@@ -16,8 +16,11 @@ import Business.House;
 import Business.Patient;
 import Business.PatientDirectory;
 import Business.Person;
+import Business.PersonDirectory;
 import Business.SystemClass;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -37,8 +40,9 @@ public class HomePage extends javax.swing.JFrame {
    
     SystemClass system = new SystemClass();
     PatientDirectory patientList = system.getPatientList();
+    PersonDirectory personList =  system.getPersonList();
     CityCatalogue cityList = system.getCityList();
-   
+    House patientHouse;
     
     public HomePage() {
         initComponents();
@@ -66,11 +70,9 @@ public class HomePage extends javax.swing.JFrame {
         registrationLink = new javax.swing.JLabel();
         passwordTxtField = new javax.swing.JPasswordField();
         patientRegistrationPage = new javax.swing.JPanel();
-        patientSetPasswordTxtField = new javax.swing.JTextField();
         patientNameTxtField = new javax.swing.JTextField();
-        patientCommunityLabel = new javax.swing.JLabel();
         patientRegisterBtn = new javax.swing.JButton();
-        patientHouseLabel = new javax.swing.JLabel();
+        patientCityLabel = new javax.swing.JLabel();
         patientAgeTxtField = new javax.swing.JTextField();
         maleRadio = new javax.swing.JRadioButton();
         patientNameLabel = new javax.swing.JLabel();
@@ -81,10 +83,23 @@ public class HomePage extends javax.swing.JFrame {
         patientDOB = new com.toedter.calendar.JDateChooser();
         patientGenderLabel = new javax.swing.JLabel();
         patientUsernameLabel = new javax.swing.JLabel();
-        patientCityLabel = new javax.swing.JLabel();
         patientPasswordLabel = new javax.swing.JLabel();
         patientSetUsernameTxtField = new javax.swing.JTextField();
         cancelPatientRegistration = new javax.swing.JButton();
+        patientSetPasswordTxtField = new javax.swing.JPasswordField();
+        patientCommunityLabel = new javax.swing.JLabel();
+        patientHouseLabel = new javax.swing.JLabel();
+        cityComboBoxPatient = new javax.swing.JComboBox<>();
+        communityComboBoxPatient = new javax.swing.JComboBox<>();
+        houseComboBoxPatient = new javax.swing.JComboBox<>();
+        patientConfirmPasswordLabel = new javax.swing.JLabel();
+        patientConfirmsPasswordTxtField = new javax.swing.JPasswordField();
+        patientEmailLabel = new javax.swing.JLabel();
+        patientPhoneTxtField = new javax.swing.JTextField();
+        patientPhoneLabel = new javax.swing.JLabel();
+        patientEmailTxtField = new javax.swing.JTextField();
+        patientInsuranceLabel = new javax.swing.JLabel();
+        patientInsuranceTxtField = new javax.swing.JTextField();
         systemAdminHome = new javax.swing.JPanel();
         adminSplit = new javax.swing.JSplitPane();
         controlAdmin = new javax.swing.JPanel();
@@ -255,8 +270,6 @@ public class HomePage extends javax.swing.JFrame {
 
         MainFrame.add(loginPage, "card2");
 
-        patientCommunityLabel.setText("Community");
-
         patientRegisterBtn.setText("Register");
         patientRegisterBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,7 +277,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        patientHouseLabel.setText("House");
+        patientCityLabel.setText("Select your city");
 
         buttonGroupGender.add(maleRadio);
         maleRadio.setText("Male");
@@ -285,8 +298,6 @@ public class HomePage extends javax.swing.JFrame {
 
         patientUsernameLabel.setText("Username");
 
-        patientCityLabel.setText("City");
-
         patientPasswordLabel.setText("Password");
 
         cancelPatientRegistration.setText("Cancel");
@@ -296,65 +307,137 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
+        patientCommunityLabel.setText("Select your community");
+
+        patientHouseLabel.setText("Select your house");
+
+        cityComboBoxPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cityComboBoxPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cityComboBoxPatientActionPerformed(evt);
+            }
+        });
+
+        communityComboBoxPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        communityComboBoxPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                communityComboBoxPatientActionPerformed(evt);
+            }
+        });
+
+        houseComboBoxPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        houseComboBoxPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                houseComboBoxPatientActionPerformed(evt);
+            }
+        });
+
+        patientConfirmPasswordLabel.setText("Confirm Password");
+
+        patientEmailLabel.setText("Contact Email");
+
+        patientPhoneLabel.setText("Contact Number");
+
+        patientEmailTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                patientEmailTxtFieldActionPerformed(evt);
+            }
+        });
+
+        patientInsuranceLabel.setText("Health Insurance Plan");
+
         javax.swing.GroupLayout patientRegistrationPageLayout = new javax.swing.GroupLayout(patientRegistrationPage);
         patientRegistrationPage.setLayout(patientRegistrationPageLayout);
         patientRegistrationPageLayout.setHorizontalGroup(
             patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(patientRegistrationPageLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addGap(100, 100, 100)
                 .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(patientRegistrationPageLayout.createSequentialGroup()
-                        .addComponent(patientGenderLabel)
-                        .addGap(53, 53, 53)
-                        .addComponent(maleRadio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(femaleRadio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(otherRadio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(patientRegistrationPageLayout.createSequentialGroup()
-                            .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(patientHouseLabel)
-                                .addComponent(patientPasswordLabel)
-                                .addComponent(patientUsernameLabel)
-                                .addComponent(patientDOBLabel))
-                            .addGap(44, 44, 44)
-                            .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(patientRegistrationPageLayout.createSequentialGroup()
-                                    .addComponent(patientRegisterBtn)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addComponent(patientSetUsernameTxtField)
-                                .addComponent(patientSetPasswordTxtField)
-                                .addComponent(patientDOB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(patientRegistrationPageLayout.createSequentialGroup()
-                                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(patientCommunityLabel)
-                                    .addComponent(patientAgeLabel)
-                                    .addComponent(patientCityLabel))
-                                .addGap(35, 35, 35)
-                                .addComponent(patientAgeTxtField))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, patientRegistrationPageLayout.createSequentialGroup()
+                        .addComponent(patientDOBLabel)
+                        .addGap(225, 225, 225))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(patientAgeLabel, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(patientRegistrationPageLayout.createSequentialGroup()
                                 .addComponent(patientNameLabel)
-                                .addGap(66, 66, 66)
-                                .addComponent(patientNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(37, 37, 37)
-                .addComponent(cancelPatientRegistration)
-                .addGap(32, 32, 32))
+                                .addGap(273, 273, 273)))
+                        .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                            .addComponent(patientGenderLabel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(patientNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                                    .addComponent(maleRadio)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(femaleRadio)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(otherRadio))
+                                .addComponent(patientAgeTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(patientDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                        .addComponent(patientCommunityLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(communityComboBoxPatient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(135, 135, 135))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientRegistrationPageLayout.createSequentialGroup()
+                        .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, patientRegistrationPageLayout.createSequentialGroup()
+                                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(patientUsernameLabel)
+                                    .addComponent(patientPasswordLabel))
+                                .addGap(78, 78, 78)
+                                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                                        .addComponent(patientRegisterBtn)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                                        .addComponent(cancelPatientRegistration)
+                                        .addGap(129, 129, 129))
+                                    .addComponent(patientSetUsernameTxtField)
+                                    .addComponent(patientSetPasswordTxtField)
+                                    .addComponent(patientConfirmsPasswordTxtField)))
+                            .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                                .addComponent(patientHouseLabel)
+                                .addGap(38, 38, 38)
+                                .addComponent(houseComboBoxPatient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, patientRegistrationPageLayout.createSequentialGroup()
+                                .addComponent(patientCityLabel)
+                                .addGap(52, 52, 52)
+                                .addComponent(cityComboBoxPatient, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(44, 44, 44))
+                    .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                        .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                                .addComponent(patientPhoneLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(patientPhoneTxtField))
+                            .addComponent(patientConfirmPasswordLabel)
+                            .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(patientInsuranceLabel)
+                                    .addComponent(patientEmailLabel))
+                                .addGap(33, 33, 33)
+                                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(patientEmailTxtField)
+                                    .addComponent(patientInsuranceTxtField))))
+                        .addGap(70, 70, 70))))
         );
         patientRegistrationPageLayout.setVerticalGroup(
             patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, patientRegistrationPageLayout.createSequentialGroup()
-                .addContainerGap(225, Short.MAX_VALUE)
+            .addGroup(patientRegistrationPageLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(patientNameLabel)
                     .addComponent(patientNameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(patientAgeLabel)
                     .addComponent(patientAgeTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(15, 15, 15)
                 .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(patientGenderLabel)
                     .addComponent(maleRadio)
@@ -364,25 +447,47 @@ public class HomePage extends javax.swing.JFrame {
                 .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(patientDOBLabel)
                     .addComponent(patientDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(patientCityLabel)
-                .addGap(18, 18, 18)
-                .addComponent(patientCommunityLabel)
-                .addGap(29, 29, 29)
-                .addComponent(patientHouseLabel)
-                .addGap(18, 18, 18)
-                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(patientUsernameLabel)
-                    .addComponent(patientSetUsernameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(patientPasswordLabel)
-                    .addComponent(patientSetPasswordTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(patientRegisterBtn)
-                    .addComponent(cancelPatientRegistration))
-                .addGap(51, 51, 51))
+                    .addComponent(patientPhoneLabel)
+                    .addComponent(patientPhoneTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientEmailLabel)
+                    .addComponent(patientEmailTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientInsuranceLabel)
+                    .addComponent(patientInsuranceTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientCityLabel)
+                    .addComponent(cityComboBoxPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientCommunityLabel)
+                    .addComponent(communityComboBoxPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientHouseLabel)
+                    .addComponent(houseComboBoxPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientSetUsernameTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(patientUsernameLabel))
+                .addGap(18, 18, 18)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(patientPasswordLabel)
+                    .addComponent(patientSetPasswordTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientConfirmPasswordLabel)
+                    .addComponent(patientConfirmsPasswordTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(patientRegistrationPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cancelPatientRegistration)
+                    .addComponent(patientRegisterBtn))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         MainFrame.add(patientRegistrationPage, "card3");
@@ -1220,42 +1325,48 @@ public class HomePage extends javax.swing.JFrame {
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
 
-        if("Patient".equals(userType)){
-            for(Patient p : patientList.getPatientList()){
-                if (usernameTxtField.getText().equals(p.getUsername())&& passwordTxtField.getText().equals(p.getPassword()) ){
-                 
-        
-                changePanel(patientHome); 
-                welcomePatient.setText("Welcome " + p.getName());
-        
-                }
-            }
-        }
-        else if ("System Admin".equals(userType)){
+        if ("System Admin".equals(userType)){
             if (usernameTxtField.getText().equals("admin")&& passwordTxtField.getText().equals("admin") )    {
                 changePanel(systemAdminHome);
             }
-  
-           
-             
-        }
-        else if ("Community Admin".equals(userType)){
-            for (City city :cityList.getCitytList()){
-            for (Community cm : city.getCommunityList()){
-            
-             if (usernameTxtField.getText().equals("A")&& passwordTxtField.getText().equals("A") )    {
-                 changePanel(communityAdminHouse);
-                 loggedInAdmin=cm.getAdmin();
-                 welcomecommunityAdmin.setText(cm.getCommunityName());
-            }
-             
-         }
-            }
-
-            
-  
-           
-            
+                
+//        if("Patient".equals(userType)){
+//            for(Patient p : patientList.getPatientList()){
+//                if (usernameTxtField.getText().equals(p.getUsername())&& passwordTxtField.getText().equals(p.getPassword()) ){
+//                 
+//        
+//                changePanel(patientHome); 
+//                welcomePatient.setText("Welcome " + p.getName());
+//        
+//                }
+//            }
+//        }
+//        else if ("System Admin".equals(userType)){
+//            if (usernameTxtField.getText().equals("admin")&& passwordTxtField.getText().equals("admin") )    {
+//                changePanel(systemAdminHome);
+//            }
+//  
+//           
+//             
+//        }
+//        else if ("Community Admin".equals(userType)){
+//            for (City city :cityList.getCitytList()){
+//            for (Community cm : city.getCommunityList()){
+//            
+//             if (usernameTxtField.getText().equals("A")&& passwordTxtField.getText().equals("A") )    {
+//                 changePanel(communityAdminHouse);
+//                 loggedInAdmin=cm.getAdmin();
+//                 welcomecommunityAdmin.setText(cm.getCommunityName());
+//            }
+//             
+//         }
+//            }
+//
+//            
+//  
+//           
+//            
+//        }
         }
     }//GEN-LAST:event_loginBtnActionPerformed
     private void changePanel(javax.swing.JPanel j){
@@ -1270,6 +1381,18 @@ public class HomePage extends javax.swing.JFrame {
         MainFrame.add(patientRegistrationPage);
         MainFrame.repaint();
         MainFrame.revalidate();
+        cityComboBoxPatient.removeAllItems();
+        cityComboBoxPatient.addItem("City");
+        cityComboBoxPatient.setSelectedItem("City"); 
+        for (City c : cityList.getCitytList()){
+             cityComboBoxPatient.addItem(c.getCityName());   
+         }
+        communityComboBoxPatient.removeAllItems();
+        communityComboBoxPatient.addItem("Community");
+        communityComboBoxPatient.setSelectedItem("Community"); 
+        houseComboBoxPatient.removeAllItems();
+        houseComboBoxPatient.addItem("Houses");
+        houseComboBoxPatient.setSelectedItem("Houses"); 
     }//GEN-LAST:event_registrationLinkMouseClicked
     private void populateTable(){
          
@@ -1292,11 +1415,23 @@ public class HomePage extends javax.swing.JFrame {
             
              
          }
+    private boolean validation(String input, String regexPattern){
+    Pattern pattern = Pattern.compile(regexPattern,Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(input);
+        return matcher.find();}
     private void patientRegisterBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientRegisterBtnActionPerformed
         // TODO add your handling code here:
         try{
             String name = patientNameTxtField.getText();
-             int age = Integer.parseInt( patientAgeTxtField.getText());
+            if(name.length()==0 || !validation(name,"^(?![\\s.]+$)[a-zA-Z\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Name");
+             return;
+            }
+            int age = Integer.parseInt( patientAgeTxtField.getText());
+             if(!(age >= 18)){
+             JOptionPane.showMessageDialog(this,"Invalid Age. Age should be above 18 yrs"); 
+             return;
+            }
             String gender;
             if(maleRadio.isSelected()){
                 gender= "Male";
@@ -1304,27 +1439,84 @@ public class HomePage extends javax.swing.JFrame {
             else if(femaleRadio.isSelected()){
                 gender= "Female";
             }
-            else {
-                gender= "Other";
+            else if(otherRadio.isSelected()){
+                    gender = "Other";
+                }
+             else {
+                 gender = "";
+             }
+            if(gender.length()==0 ){
+             JOptionPane.showMessageDialog(this,"Please select your gender. ");
+             return;
             }
              Date dob= patientDOB.getDate();
+              if(dob==null){
+             JOptionPane.showMessageDialog(this,"Please select your date of birth.");
+             return;
+            }
+             String phone=patientPhoneTxtField.getText();
+             if(!validation(phone,"^\\d{10}$")){
+             JOptionPane.showMessageDialog(this,"Invalid Phone Number");
+             return;
+            }
+             String email =patientEmailTxtField.getText();
+             if(email.length()==0 || !validation(email,"^(.+)@(\\S+)$")){
+             JOptionPane.showMessageDialog(this,"Invalid Email");
+             return;
+            }
+             
+             String insurance = patientInsuranceTxtField.getText();
+             if(insurance.length()==0 || !validation(insurance,"^(?![\\s.]+$)[a-zA-Z\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Insurance");
+             return;
+            }
              String username=patientSetUsernameTxtField.getText();
+             if(username.length()==0 || !validation(insurance,"^(?![\\s.]+$)[a-zA-Z\\s.]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Usernam.No special character and numbers allowed ");
+             return;
+            }
+            for(Person p:personList.getPersonList()){
+                if(p.getUsername().equals(username)){
+                  JOptionPane.showMessageDialog(this,"Invalid Usernam.This username already exists.");
+                  return;  
+                }
+            }
              String password = patientSetPasswordTxtField.getText();
+             if(password.length()==0 || !validation(password,"^(?![\\s.]+$)[a-zA-Z0-9@#$]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Password.Only A-Z,a-z,0-9,@,and # are allowed ");
+             return;
+            }
+            String confirmPassword = patientConfirmsPasswordTxtField.getText();
+            if(!(confirmPassword.equals(password))){
+             JOptionPane.showMessageDialog(this,"Confirm Password does not match the set password");
+             return;
+            }
+            String selectedcity = String.valueOf(cityComboBoxPatient.getSelectedItem());
+            String selectedcommunity = String.valueOf(communityComboBoxPatient.getSelectedItem());
+            String selectedhouse = String.valueOf(houseComboBoxPatient.getSelectedItem());
+            if("City".equals(selectedcity)||"Community".equals(selectedcommunity)||"House".equals(selectedhouse)){
+            JOptionPane.showMessageDialog(this,"Invalid Address. Select all the field of address.");
+             return;
+            }
+//            
+              Person person = new Person(name,age,gender,phone,email,insurance,patientHouse,dob,username,password);
+              personList.addNewPerson(person);
+              Patient patient = new Patient(person);
+              patientList.addNewPatient(patient);
+              
+            
            
-            Patient p = patientList.addNewPatient();
-            p.setName(name);
-            p.setAge(age);
-            p.setDob(dob);
-            p.setGender(gender);
-            p.setUsername(username);
-            p.setPassword(password);
             JOptionPane.showMessageDialog(this,"Your patient account is successfully registered.");
             patientNameTxtField.setText("");
             patientAgeTxtField.setText("");
             buttonGroupGender.clearSelection();
             patientDOB.setCalendar(null);
+            patientPhoneTxtField.setText("");
+            patientEmailTxtField.setText("");
+            patientInsuranceTxtField.setText("");
             patientSetUsernameTxtField.setText("");
             patientSetPasswordTxtField.setText("");
+            patientConfirmsPasswordTxtField.setText("");
             changePanel(loginPage);
         }
         catch (Exception e){
@@ -1338,7 +1530,17 @@ public class HomePage extends javax.swing.JFrame {
 
     private void cancelPatientRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelPatientRegistrationActionPerformed
         // TODO add your handling code here:
-        changePanel(loginPage);
+            patientNameTxtField.setText("");
+            patientAgeTxtField.setText("");
+            buttonGroupGender.clearSelection();
+            patientDOB.setCalendar(null);
+            patientPhoneTxtField.setText("");
+            patientEmailTxtField.setText("");
+            patientInsuranceTxtField.setText("");
+            patientSetUsernameTxtField.setText("");
+            patientSetPasswordTxtField.setText("");
+            patientConfirmsPasswordTxtField.setText("");
+            changePanel(loginPage);
     }//GEN-LAST:event_cancelPatientRegistrationActionPerformed
 
     private void manageCityBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageCityBtnActionPerformed
@@ -1467,8 +1669,8 @@ City cityCombo= new City();
          }
         Community community = city.addNewCommunity();
         community.setCommunityName(addCommunityTxtField.getText());
-        Person person = new Person("A",2,"A","A","A","A");
-        Admin communityAdmin = new Admin(community,person);
+       // Person person = new Person("A",2,"A","A","A","A");
+       // Admin communityAdmin = new Admin(community,person);
         populateTable2();
        
         
@@ -1887,6 +2089,70 @@ City cityCombo= new City();
           doctor.setName(addDoctorTxtField.getText());
          populateTable5();
     }//GEN-LAST:event_addDoctorBtnActionPerformed
+
+    private void patientEmailTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientEmailTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_patientEmailTxtFieldActionPerformed
+
+    private void cityComboBoxPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityComboBoxPatientActionPerformed
+        // TODO add your handling code here:
+        String selectedcity = String.valueOf(cityComboBoxPatient.getSelectedItem());
+        City city= new City();
+        for (City c : cityList.getCitytList()){
+             if(c.getCityName().equals(selectedcity)){
+                 city=c;
+             }
+            
+         }
+        communityComboBoxPatient.removeAllItems();
+        communityComboBoxPatient.addItem("Community");
+        communityComboBoxPatient.setSelectedItem("Community");
+        for (Community cm :city.getCommunityList()){
+             communityComboBoxPatient.addItem(cm.getCommunityName()); 
+         }
+        
+    }//GEN-LAST:event_cityComboBoxPatientActionPerformed
+
+    private void communityComboBoxPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_communityComboBoxPatientActionPerformed
+        // TODO add your handling code here:
+         String selectedcity = String.valueOf(cityComboBoxPatient.getSelectedItem());
+         String selectedcommunity = String.valueOf(communityComboBoxPatient.getSelectedItem());
+        City city= new City();
+        for (City c : cityList.getCitytList()){
+             if(c.getCityName().equals(selectedcity)){
+                 city=c;
+             }
+            
+         }
+        Community community = new Community();
+        for (Community cm :city.getCommunityList()){
+            if(cm.getCommunityName().equals(selectedcommunity)){
+             community = cm;
+         }
+        houseComboBoxPatient.removeAllItems();
+        houseComboBoxPatient.addItem("House");
+        houseComboBoxPatient.setSelectedItem("House");
+      
+        for (House h :community.getHouseList()){
+             houseComboBoxPatient.addItem(h.getHouseName()); 
+         }
+        } 
+    }//GEN-LAST:event_communityComboBoxPatientActionPerformed
+
+    private void houseComboBoxPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseComboBoxPatientActionPerformed
+        // TODO add your handling code here:
+        String selectedhouse = String.valueOf(houseComboBoxPatient.getSelectedItem());
+        for(City c : cityList.getCitytList()){
+           for (Community cm :c.getCommunityList()){ 
+                  for (House h :cm.getHouseList()){
+                      if(selectedhouse.equals(h.getHouseName())){
+                           patientHouse= h;
+                      }
+                  }
+           }
+        }
+       
+    }//GEN-LAST:event_houseComboBoxPatientActionPerformed
     Community communityCombo = new Community();
     private void populateTable3(){
     
@@ -2069,12 +2335,14 @@ City cityCombo= new City();
     private javax.swing.JComboBox<String> cityComboBoxDoctor;
     private javax.swing.JComboBox<String> cityComboBoxHospital;
     private javax.swing.JComboBox<String> cityComboBoxHouse;
+    private javax.swing.JComboBox<String> cityComboBoxPatient;
     private javax.swing.JPanel communityAdminHouse;
     private javax.swing.JPasswordField communityAdminPasswordTxtField;
     private javax.swing.JSplitPane communityAdminSplit;
     private javax.swing.JComboBox<String> communityComboBoxDoctor;
     private javax.swing.JComboBox<String> communityComboBoxHospital;
     private javax.swing.JComboBox<String> communityComboBoxHouse;
+    private javax.swing.JComboBox<String> communityComboBoxPatient;
     private javax.swing.JTable communityTable;
     private javax.swing.JPanel controlAdmin;
     private javax.swing.JPanel controlCommunityPanel;
@@ -2086,6 +2354,7 @@ City cityCombo= new City();
     private javax.swing.JComboBox<String> hospitalComboBoxDoctor;
     private javax.swing.JButton hospitalDeleteBtn;
     private javax.swing.JTable hospitalTable;
+    private javax.swing.JComboBox<String> houseComboBoxPatient;
     private javax.swing.JButton houseDeleteBtn;
     private javax.swing.JTable houseTable;
     private javax.swing.JButton houseUpdateBtn;
@@ -2121,17 +2390,25 @@ City cityCombo= new City();
     private javax.swing.JTextField patientAgeTxtField;
     private javax.swing.JLabel patientCityLabel;
     private javax.swing.JLabel patientCommunityLabel;
+    private javax.swing.JLabel patientConfirmPasswordLabel;
+    private javax.swing.JPasswordField patientConfirmsPasswordTxtField;
     private com.toedter.calendar.JDateChooser patientDOB;
     private javax.swing.JLabel patientDOBLabel;
+    private javax.swing.JLabel patientEmailLabel;
+    private javax.swing.JTextField patientEmailTxtField;
     private javax.swing.JLabel patientGenderLabel;
     private javax.swing.JPanel patientHome;
     private javax.swing.JLabel patientHouseLabel;
+    private javax.swing.JLabel patientInsuranceLabel;
+    private javax.swing.JTextField patientInsuranceTxtField;
     private javax.swing.JLabel patientNameLabel;
     private javax.swing.JTextField patientNameTxtField;
     private javax.swing.JLabel patientPasswordLabel;
+    private javax.swing.JLabel patientPhoneLabel;
+    private javax.swing.JTextField patientPhoneTxtField;
     private javax.swing.JButton patientRegisterBtn;
     private javax.swing.JPanel patientRegistrationPage;
-    private javax.swing.JTextField patientSetPasswordTxtField;
+    private javax.swing.JPasswordField patientSetPasswordTxtField;
     private javax.swing.JTextField patientSetUsernameTxtField;
     private javax.swing.JLabel patientUsernameLabel;
     private javax.swing.JLabel registrationLink;

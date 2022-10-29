@@ -25,10 +25,10 @@ public class PatientDirectory {
     public void setPatientList(ArrayList<Patient> patientList) {
         this.patientList = patientList;
     }
-    public Patient addNewPatient(){
-        Patient newPatient = new Patient();
+    public void addNewPatient( Patient newPatient){
+        
         patientList.add(newPatient);
-        return newPatient;
+       
     }
     
 }

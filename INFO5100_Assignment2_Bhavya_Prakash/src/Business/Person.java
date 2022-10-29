@@ -4,58 +4,125 @@
  */
 package Business;
 
+import java.util.Date;
+
 /**
  *
  * @author BHAVYA PRAKASH
  */
 public class Person {
  
-    private String name;
-    private int age;
-    private String gender;
-    private String phone;
+    private String personName;
+    private int personAge;
+    private String personGender;
+    private String personContactNo;
+    private String personContactEmail;
+    private String personInsurance;
+    private String personAddress;
+
+    public String getPersonAddress() {
+        return personAddress;
+    }
+
+    public void setPersonAddress(String personAddress) {
+        this.personAddress = personAddress;
+    }
+    private House house;
+    private Date personDOB;
     private String username;
     private String password;
 
-    public Person(String name, int age, String gender, String phone, String username, String password) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.phone = phone;
+    public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, String personInsurance, House house, Date personDOB, String username, String password) {
+        this.personName = personName;
+        this.personAge = personAge;
+        this.personGender = personGender;
+        this.personContactNo = personContactNo;
+        this.personContactEmail = personContactEmail;
+        this.personInsurance = personInsurance;
+        this.house = house;
+        this.personDOB = personDOB;
         this.username = username;
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getPersonName() {
+        return personName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPersonName(String personName) {
+        this.personName = personName;
     }
 
-    public int getAge() {
-        return age;
+    public int getPersonAge() {
+        return personAge;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPersonAge(int personAge) {
+        this.personAge = personAge;
     }
 
-    public String getGender() {
-        return gender;
+    public String getPersonGender() {
+        return personGender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setPersonGender(String personGender) {
+        this.personGender = personGender;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPersonContactNo() {
+        return personContactNo;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPersonContactNo(String personContactNo) {
+        this.personContactNo = personContactNo;
+    }
+
+    public String getPersonContactEmail() {
+        return personContactEmail;
+    }
+
+    public void setPersonContactEmail(String personContactEmail) {
+        this.personContactEmail = personContactEmail;
+    }
+
+    public String getPersonInsurance() {
+        return personInsurance;
+    }
+
+    public void setPersonInsurance(String personInsurance) {
+        this.personInsurance = personInsurance;
+    }
+
+    public House getHouse() {
+        return house;
+    }
+
+    public void setHouse(House house) {
+        this.house = house;
+    }
+
+    public Date getPersonDOB() {
+        return personDOB;
+    }
+
+    public void setPersonDOB(Date personDOB) {
+        this.personDOB = personDOB;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }
