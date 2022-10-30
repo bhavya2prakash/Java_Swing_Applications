@@ -12,7 +12,7 @@ package Business;
  */
 public class Patient {
     private Person person;
-    private EncounterHistory encounterHistory;
+    private EncounterHistory encounterHistory = new EncounterHistory();
 
     public Patient(Person person) {
         this.person = person;

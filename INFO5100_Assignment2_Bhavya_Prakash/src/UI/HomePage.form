@@ -24,7 +24,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-128,0,0,2,-52"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,5,0,0,3,53"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -64,7 +64,7 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="usernameTxtField" pref="419" max="32767" attributes="0"/>
+                                          <Component id="usernameTxtField" pref="524" max="32767" attributes="0"/>
                                           <Component id="userTypeSelect" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -108,7 +108,7 @@
                       <Component id="loginBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="registrationLink" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="318" max="32767" attributes="0"/>
+                      <EmptySpace pref="451" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -236,7 +236,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Component id="patientRegisterBtn" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="116" max="32767" attributes="0"/>
+                                              <EmptySpace pref="281" max="32767" attributes="0"/>
                                               <Component id="cancelPatientRegistration" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                                           </Group>
@@ -359,7 +359,7 @@
                           <Component id="cancelPatientRegistration" min="-2" max="-2" attributes="0"/>
                           <Component id="patientRegisterBtn" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <EmptySpace pref="251" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -557,7 +557,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="patientHomeSplitPane" alignment="0" max="32767" attributes="0"/>
+                  <Component id="patientHomeSplitPane" alignment="0" pref="821" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -591,12 +591,19 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="patientHomeBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="patientHomeBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="searchDoctorPatientBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               <Component id="updatePatientProfileBtn" min="-2" max="-2" attributes="0"/>
@@ -604,7 +611,7 @@
                               <Component id="deletePatientProfileBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="patientLogOutBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="276" max="32767" attributes="0"/>
+                              <EmptySpace pref="409" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -627,6 +634,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Delete Profile"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deletePatientProfileBtnActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="patientLogOutBtn">
                       <Properties>
@@ -634,6 +644,14 @@
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patientLogOutBtnActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="patientHomeBtn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Home"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patientHomeBtnActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -657,25 +675,36 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
-                              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="welcomePatient" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="203" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                                          <Component id="welcomePatient" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
-                              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="welcomePatient" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="welcomePatient" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane7" min="-2" pref="122" max="-2" attributes="0"/>
+                                  <EmptySpace pref="440" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -686,6 +715,53 @@
                             <Property name="text" type="java.lang.String" value="Welcome"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel2">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Your Appointment Request List"/>
+                          </Properties>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="appointmentListTable">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="3" rowCount="4">
+                                    <Column editable="true" title="Encounter Id" type="java.lang.Object"/>
+                                    <Column editable="true" title="Appointment Details" type="java.lang.Object"/>
+                                    <Column editable="true" title="Appointement Status" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                  <TableColumnModel selectionModel="0">
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                  </TableColumnModel>
+                                </Property>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="searchDoctorPanel">
@@ -707,16 +783,15 @@
                                               <Component id="bookAppointmentBtn" min="-2" pref="199" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="hospitalComboBoxPatient" min="-2" pref="180" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="116" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="78" max="32767" attributes="0"/>
+                                  <EmptySpace pref="161" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -727,13 +802,12 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="hospitalComboBoxPatient" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                   <Component id="jScrollPane6" min="-2" pref="103" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                                   <Component id="bookAppointmentBtn" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="257" max="32767" attributes="0"/>
+                                  <EmptySpace pref="390" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -797,6 +871,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Request Apppointment"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bookAppointmentBtnActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="hospitalComboBoxPatient">
                           <Properties>
@@ -816,14 +893,6 @@
                             <Property name="text" type="java.lang.String" value="Your nearby hospitals"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton1">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Search Doctors"/>
-                          </Properties>
-                          <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-                          </Events>
-                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="updatePatientProfilePanel">
@@ -836,12 +905,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="694" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -862,7 +931,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="adminSplit" alignment="0" pref="716" max="32767" attributes="0"/>
+                  <Component id="adminSplit" alignment="0" pref="821" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -934,7 +1003,7 @@
                               <Component id="managePatientBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="adminLogOut" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="300" max="32767" attributes="0"/>
+                              <EmptySpace pref="433" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1014,7 +1083,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="658" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1026,7 +1095,7 @@
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1094,7 +1163,7 @@
                               <Component id="addNewCityBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="111" max="32767" attributes="0"/>
+                      <EmptySpace pref="216" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1123,7 +1192,7 @@
                           <Component id="updateCityNameTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="updateCityBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="368" max="32767" attributes="0"/>
+                      <EmptySpace pref="501" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1246,7 +1315,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="addCommunityLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="48" max="32767" attributes="0"/>
+                              <EmptySpace pref="153" max="32767" attributes="0"/>
                               <Component id="addCommunityTxtField" min="-2" pref="213" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="311" max="-2" attributes="0"/>
                           </Group>
@@ -1294,7 +1363,7 @@
                           <Component id="updateCommunityBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="deleteCommunityBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="297" max="32767" attributes="0"/>
+                      <EmptySpace pref="430" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1464,7 +1533,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="154" max="32767" attributes="0"/>
+                      <EmptySpace pref="259" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1498,7 +1567,7 @@
                           <Component id="updateHospitalBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="hospitalDeleteBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="203" max="32767" attributes="0"/>
+                      <EmptySpace pref="336" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1667,7 +1736,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="154" max="32767" attributes="0"/>
+                      <EmptySpace pref="259" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1691,7 +1760,7 @@
                           <Component id="houseUpdateBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="houseDeleteBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="387" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1874,7 +1943,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -1970,7 +2039,7 @@
                           <Component id="patientPhoneLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="doctorDegreeTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="11" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="doctorPhoneTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="patientPhoneLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2243,12 +2312,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="716" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="821" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="640" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2263,12 +2332,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="716" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="821" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="640" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="773" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2341,7 +2410,7 @@
                               <Component id="manageHospitalBttn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="logoutCommunityAdmin" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="366" max="32767" attributes="0"/>
+                              <EmptySpace pref="499" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2385,7 +2454,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                               <Component id="welcomecommunityAdmin" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="299" max="32767" attributes="0"/>
+                              <EmptySpace pref="404" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2394,7 +2463,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
                               <Component id="welcomecommunityAdmin" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="498" max="32767" attributes="0"/>
+                              <EmptySpace pref="631" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2421,29 +2490,529 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="215" max="-2" attributes="0"/>
-                      <Component id="welcomeDoctor" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="283" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jSplitPane1" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                      <Component id="welcomeDoctor" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="296" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jSplitPane1" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="welcomeDoctor">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="welcome doctor"/>
-              </Properties>
-            </Component>
+            <Container class="javax.swing.JSplitPane" name="jSplitPane1">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="doctorControlPanel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
+                      <JSplitPaneConstraints position="left"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="addEncounterDetailsBtn" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="doctorLogOutBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="manageProfileBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <Component id="addEncounterDetailsBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="manageProfileBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="doctorLogOutBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="538" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="addEncounterDetailsBtn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Manage Appointments"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="manageProfileBtn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Manage Profile"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="doctorLogOutBtn">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Log Out"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doctorLogOutBtnActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="doctorViewPanel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
+                      <JSplitPaneConstraints position="right"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="doctorHomePanel">
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                          <CardConstraints cardName="card2"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace pref="269" max="32767" attributes="0"/>
+                                  <Component id="welcomeDoctor" min="-2" pref="302" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="welcomeDoctor" min="-2" pref="55" max="-2" attributes="0"/>
+                                  <EmptySpace pref="679" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="welcomeDoctor">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="welcome doctor"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="doctorManageAppointmentsPanel">
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                          <CardConstraints cardName="card3"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                                                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="patientDetailsGenderLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="patientDetailsAgeLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                                                              <Component id="patientDetailsNameLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="32767" attributes="0"/>
+                                                          <Component id="patientDetailsEmailLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="32767" attributes="0"/>
+                                                          <Component id="patientDetailsPhoneLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="patientDetailsInsuranceLabel" min="-2" pref="132" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
+                                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="patientPulseTxtField" min="-2" pref="110" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                          <Component id="patientBloodPressureTxtField" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="patientSymptomsTxtField" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                                          <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="patientDiagnosisTxtField" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="patientRespRateTxtField" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                                  <Component id="encounterDateChooser" min="-2" pref="149" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                              <Component id="patientComboBox" min="-2" pref="115" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                              <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
+                                      <Component id="patientBodyTempTxtField1" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <EmptySpace pref="363" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane8" min="-2" pref="147" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDetailsNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDetailsInsuranceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDetailsAgeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDetailsPhoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDetailsGenderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDetailsEmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientPulseTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="patientBloodPressureTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="patientRespRateTxtField" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="encounterDateChooser" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientSymptomsTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="patientDiagnosisTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace pref="109" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace pref="460" max="32767" attributes="0"/>
+                                      <Component id="patientBodyTempTxtField1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="291" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel3">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Your list of patients that have requested an appointment"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="patientComboBox">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+                          <AuxValues>
+                            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                          </AuxValues>
+
+                          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                          <SubComponents>
+                            <Component class="javax.swing.JTable" name="jTable1">
+                              <Properties>
+                                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                  <Table columnCount="3" rowCount="4">
+                                    <Column editable="true" title="Sn No." type="java.lang.Object"/>
+                                    <Column editable="true" title="Encounter Id" type="java.lang.Object"/>
+                                    <Column editable="true" title="Status" type="java.lang.Object"/>
+                                  </Table>
+                                </Property>
+                                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                                  <TableColumnModel selectionModel="0">
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                      <Title/>
+                                      <Editor/>
+                                      <Renderer/>
+                                    </Column>
+                                  </TableColumnModel>
+                                </Property>
+                                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                          </SubComponents>
+                        </Container>
+                        <Component class="javax.swing.JLabel" name="jLabel4">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Patient Details"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel5">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Name"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel11">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Insurance"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel7">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Age"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel13">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Phone"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel9">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Gender"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel14">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Email"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel17">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Enter Encounter Details"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel6">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Patient&apos;s Vital Signs"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel8">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Body Temperature"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel10">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Blood Pressure"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel12">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Pulse Rate"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel15">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Respiration Rate"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="patientDetailsNameLabel">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="patientDetailsAgeLabel">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="patientDetailsGenderLabel">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="patientDetailsInsuranceLabel">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="patientDetailsPhoneLabel">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="patientDetailsEmailLabel">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel23">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Select Encounter date and time"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel24">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Diagnosis"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel25">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Symptoms"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton1">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Update"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton2">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Save"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="patientBloodPressureTxtField">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="patientBodyTempTxtField1">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="patientSymptomsTxtField">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="patientPulseTxtField">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="patientRespRateTxtField">
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="patientDiagnosisTxtField">
+                        </Component>
+                        <Component class="com.toedter.calendar.JDateChooser" name="encounterDateChooser">
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

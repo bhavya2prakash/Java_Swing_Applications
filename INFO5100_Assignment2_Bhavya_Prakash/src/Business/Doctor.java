@@ -12,8 +12,16 @@ public class Doctor {
      private Person person;
      private String speciality;
      private String degree;
-     private EncounterHistory encounterHistory;
+     private PatientDirectory patientList = new PatientDirectory();
+    public PatientDirectory getPatientList() {
+        
+        return patientList;
+    }
 
+    public void setPatientList(PatientDirectory patientList) {
+        this.patientList = patientList;
+    }
+     
     public Doctor(Person person, String speciality, String degree) {
         this.person = person;
         this.speciality = speciality;
@@ -35,16 +43,6 @@ public class Doctor {
     public void setDegree(String degree) {
         this.degree = degree;
     }
-
-    public EncounterHistory getEncounterHistory() {
-        return encounterHistory;
-    }
-
-    public void setEncounterHistory(EncounterHistory encounterHistory) {
-        this.encounterHistory = encounterHistory;
-    }
-    
-    
 
     public Person getPerson() {
         return person;
