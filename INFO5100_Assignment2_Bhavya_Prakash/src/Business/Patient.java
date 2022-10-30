@@ -12,12 +12,14 @@ package Business;
  */
 public class Patient {
     private Person person;
-    private int patientId =001;
+    private static int i = 101;
+    private  int patientId;
     private EncounterHistory encounterHistory = new EncounterHistory();
 
     public Patient(Person person) {
         this.person = person;
-        patientId++;
+         this.patientId=i;
+        i=i+1;
     }
     
     public Person getPerson() {

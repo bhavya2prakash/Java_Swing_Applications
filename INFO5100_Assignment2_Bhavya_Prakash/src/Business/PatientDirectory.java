@@ -27,7 +27,7 @@ public class PatientDirectory {
     }
     public void addNewPatient( Patient newPatient){
         
-        patientList.add(newPatient);
+        this.patientList.add(newPatient);
        
     }
     

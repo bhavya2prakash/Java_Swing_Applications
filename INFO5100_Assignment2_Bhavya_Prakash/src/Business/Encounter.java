@@ -11,17 +11,20 @@ import java.util.Date;
  * @author BHAVYA PRAKASH
  */
 public class Encounter {
+    private static int i = 101;
     private int encounterId;
     private String appointmentDetails;
     private VitalSigns viatlSigns; 
-    private Date encounterDateTime;
+    private Date encounterDate;
+    private String encounterTime;
     private String diagnosis;
     private String symptoms;
     private String status = "Appointment request pending";
 
-    public Encounter(int encounterId, String appointmentDetails) {
-        this.encounterId = encounterId;
+    public Encounter(String appointmentDetails) {
+        this.encounterId=i;
         this.appointmentDetails = appointmentDetails;
+        i=i+1;
     }
 
     public int getEncounterId() {
@@ -58,13 +61,23 @@ public class Encounter {
         this.viatlSigns = viatlSigns;
     }
 
-    public Date getEncounterDateTime() {
-        return encounterDateTime;
+    public Date getEncounterDate() {
+        return encounterDate;
     }
 
-    public void setEncounterDateTime(Date encounterDateTime) {
-        this.encounterDateTime = encounterDateTime;
+    public void setEncounterDate(Date encounterDate) {
+        this.encounterDate = encounterDate;
     }
+
+    public String getEncounterTime() {
+        return encounterTime;
+    }
+
+    public void setEncounterTime(String encounterTime) {
+        this.encounterTime = encounterTime;
+    }
+
+   
 
     public String getDiagnosis() {
         return diagnosis;
