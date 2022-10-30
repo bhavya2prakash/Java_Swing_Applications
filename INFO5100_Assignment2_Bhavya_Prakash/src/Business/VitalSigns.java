@@ -15,6 +15,8 @@ public class VitalSigns {
     private String respirationRate;
     private String bloodPressure;
 
+    
+
     public String getBodyTemperature() {
         return bodyTemperature;
     }

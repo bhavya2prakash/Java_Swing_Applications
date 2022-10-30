@@ -15,6 +15,7 @@ public class Doctor {
      private String availability;
      
      private PatientDirectory patientList = new PatientDirectory();
+    
     public PatientDirectory getPatientList() {
         
         return patientList;

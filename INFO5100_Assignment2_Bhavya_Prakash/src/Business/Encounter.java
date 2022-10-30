@@ -14,7 +14,7 @@ public class Encounter {
     private static int i = 101;
     private int encounterId;
     private String appointmentDetails;
-    private VitalSigns viatlSigns; 
+    private VitalSigns viatlSigns = new VitalSigns();
     private Date encounterDate;
     private String encounterTime;
     private String diagnosis;

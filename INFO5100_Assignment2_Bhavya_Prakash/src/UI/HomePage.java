@@ -3390,15 +3390,17 @@ String selectedhospitalByPatient;
           String doctorName = selectedDoctor.getPerson().getPersonName();
           String s ="";
           for(Patient p : selectedDoctor.getPatientList().getPatientList()){
-              if(p.getPatientId()!=loggedInPatient.getPatientId()){
-               selectedDoctor.getPatientList().addNewPatient(loggedInPatient);
+              if(p.getPatientId()==loggedInPatient.getPatientId()){
+               
                s="another";
                break;
               }
               
               }
-          
+          if(!("another".equals(s))){
           selectedDoctor.getPatientList().addNewPatient(loggedInPatient);
+          }
+         
           Encounter encounter = new Encounter(doctorName+ " , " + selectedhospitalByPatient);
           loggedInPatient.getEncounterHistory().addNewEncounter(encounter);
           JOptionPane.showMessageDialog(this,"Your appointment " +s+ "is succeefully requested with the doctor.");
@@ -3499,9 +3501,9 @@ String selectedhospitalByPatient;
 
     private void patientEncounterSaveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientEncounterSaveBtnActionPerformed
         // TODO add your handling code here:
-                 int selectedRowIndex = encounterTable.getSelectedRow();
+         int selectedRowIndex = encounterTable.getSelectedRow();
         if (selectedRowIndex <0){
-           JOptionPane.showMessageDialog(this,"Please select any appoint request from the table."); 
+           JOptionPane.showMessageDialog(this,"Please select any appointment request from the table."); 
            return;
         }
           DefaultTableModel model = (DefaultTableModel) encounterTable.getModel();
@@ -3576,6 +3578,7 @@ String selectedhospitalByPatient;
                     populateEncounterTable();
                  }
                  catch(Exception e){
+                 System.out.print(e);
                  
                  }
     }//GEN-LAST:event_patientEncounterSaveBtnActionPerformed
