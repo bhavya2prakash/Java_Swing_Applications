@@ -12,12 +12,14 @@ package Business;
  */
 public class Patient {
     private Person person;
+    private int patientId =001;
     private EncounterHistory encounterHistory = new EncounterHistory();
 
     public Patient(Person person) {
         this.person = person;
+        patientId++;
     }
-
+    
     public Person getPerson() {
         return person;
     }
@@ -26,12 +28,24 @@ public class Patient {
         this.person = person;
     }
 
+    public int getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
+    
     public EncounterHistory getEncounterHistory() {
         return encounterHistory;
     }
 
     public void setEncounterHistory(EncounterHistory encounterHistory) {
         this.encounterHistory = encounterHistory;
+    }
+     @Override
+    public String toString(){
+        return this.person.getPersonName();
     }
     
 }

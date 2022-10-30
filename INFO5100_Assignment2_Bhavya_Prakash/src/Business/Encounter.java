@@ -81,7 +81,10 @@ public class Encounter {
     public void setSymptoms(String symptoms) {
         this.symptoms = symptoms;
     }
-    
+    @Override
+    public String toString(){
+        return String.valueOf(encounterId);
+    }
     
     
 }

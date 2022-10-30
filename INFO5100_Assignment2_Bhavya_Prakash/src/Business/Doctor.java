@@ -12,6 +12,8 @@ public class Doctor {
      private Person person;
      private String speciality;
      private String degree;
+     private String availability;
+     
      private PatientDirectory patientList = new PatientDirectory();
     public PatientDirectory getPatientList() {
         
@@ -22,10 +24,19 @@ public class Doctor {
         this.patientList = patientList;
     }
      
-    public Doctor(Person person, String speciality, String degree) {
+    public Doctor(Person person, String speciality, String degree,String availability ) {
         this.person = person;
         this.speciality = speciality;
         this.degree = degree;
+        this.availability = availability;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 
     public String getSpeciality() {
