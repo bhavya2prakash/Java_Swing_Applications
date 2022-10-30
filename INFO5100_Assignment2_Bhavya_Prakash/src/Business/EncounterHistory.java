@@ -29,6 +29,9 @@ public class EncounterHistory {
         this.encounterHistory.add(encounter);
         return encounter;
     }
+    public void deleteEncounter(Encounter encounter){
+      this.encounterHistory.remove(encounter);
+    }
     
  
 }

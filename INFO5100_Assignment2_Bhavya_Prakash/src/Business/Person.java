@@ -24,27 +24,21 @@ public class Person {
     private String username;
     private String password;
 
-    public String getPersonAddress() {
-        return personAddress;
-    }
-
-    public void setPersonAddress(String personAddress) {
-        this.personAddress = personAddress;
-    }
-    
-
-    public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, String personInsurance, House house, Date personDOB, String username, String password) {
+    public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, String personInsurance, String personAddress, House house, Date personDOB, String username, String password) {
         this.personName = personName;
         this.personAge = personAge;
         this.personGender = personGender;
         this.personContactNo = personContactNo;
         this.personContactEmail = personContactEmail;
         this.personInsurance = personInsurance;
+        this.personAddress = personAddress;
         this.house = house;
         this.personDOB = personDOB;
         this.username = username;
         this.password = password;
     }
+
+    
 
     public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, Date personDOB, String username, String password) {
         this.personName = personName;
@@ -123,6 +117,14 @@ public class Person {
     public void setPersonDOB(Date personDOB) {
         this.personDOB = personDOB;
     }
+    public String getPersonAddress() {
+        return personAddress;
+    }
+
+    public void setPersonAddress(String personAddress) {
+        this.personAddress = personAddress;
+    }
+    
 
     public String getUsername() {
         return username;

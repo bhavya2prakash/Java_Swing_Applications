@@ -18,7 +18,7 @@ public class Patient {
 
     public Patient(Person person) {
         this.person = person;
-         this.patientId=i;
+        this.patientId=i;
         i=i+1;
     }
     
