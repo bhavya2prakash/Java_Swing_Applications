@@ -12,14 +12,13 @@ package Business;
  */
 public class Patient {
     private Person person;
-    private static int i = 101;
-    private  int patientId;
+    
+    
     private EncounterHistory encounterHistory = new EncounterHistory();
 
     public Patient(Person person) {
         this.person = person;
-        this.patientId=i;
-        i=i+1;
+       
     }
     
     public Person getPerson() {
@@ -30,13 +29,7 @@ public class Patient {
         this.person = person;
     }
 
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
-    }
+   
     
     public EncounterHistory getEncounterHistory() {
         return encounterHistory;

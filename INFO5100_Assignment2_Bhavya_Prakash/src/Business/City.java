@@ -13,8 +13,18 @@ import java.util.ArrayList;
 public class City {
     
     private String cityName;
-    private ArrayList<Community> communityList = new ArrayList<Community>();
-
+    private ArrayList<Community> communityList ;
+    
+    public City() {
+       
+        this.communityList = new ArrayList<>();
+    }
+    public City(String cityName) {
+        this.cityName = cityName;
+        this.communityList = new ArrayList<>();
+    }
+    
+    
     public String getCityName() {
         return cityName;
     }

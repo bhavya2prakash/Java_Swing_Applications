@@ -29,6 +29,11 @@ public class CityCatalogue {
         cityList.add(newCity);
         return newCity;
     }
+    public void addNewwCity(City city){
+  
+        cityList.add(city);
+        
+    }
      public void deleteCity(City city){
         cityList.remove(city);
     }

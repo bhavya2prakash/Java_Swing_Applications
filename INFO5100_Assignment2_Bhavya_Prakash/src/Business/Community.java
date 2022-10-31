@@ -16,10 +16,11 @@ public class Community {
     private Admin communityadmin;
     private ArrayList<House> houseList = new ArrayList<House>();
     private HospitalDirectory hospitalList ;
-
+    
     public Community() {
        this.hospitalList = new HospitalDirectory();
     }
+    
 
     public Admin getCommunityadmin() {
         return communityadmin;

@@ -11,7 +11,9 @@ import java.util.Date;
  * @author BHAVYA PRAKASH
  */
 public class Person {
- 
+    
+    private static int i = 101;
+    private  int personId;
     private String personName;
     private int personAge;
     private String personGender;
@@ -36,6 +38,8 @@ public class Person {
         this.personDOB = personDOB;
         this.username = username;
         this.password = password;
+         this.personId=i;
+        i=i+1;
     }
 
     
@@ -52,8 +56,28 @@ public class Person {
         this.password = password;
         this.personInsurance = "not needed";
         this.house = new House();
+         this.personId=i;
+        i=i+1;
         
     }
+
+    public Person(String username, String password) {
+        this.username = username;
+        this.password = password;
+         this.personId=i;
+        i=i+1;
+    }
+    
+
+    public String getPersonId() {
+        return String.valueOf(personId);
+    }
+
+    public void setPersonId(int personId) {
+        this.personId = personId;
+    }
+
+    
 
     public String getPersonName() {
         return personName;

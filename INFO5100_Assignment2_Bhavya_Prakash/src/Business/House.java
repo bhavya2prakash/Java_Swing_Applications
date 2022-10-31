@@ -13,7 +13,17 @@ import java.util.ArrayList;
 public class House {
     
     String houseName;
+    String zipcode;
+    
+   
+    
+     public String getZipcode() {
+        return zipcode;
+    }
 
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
     public String getHouseName() {
         return houseName;
     }

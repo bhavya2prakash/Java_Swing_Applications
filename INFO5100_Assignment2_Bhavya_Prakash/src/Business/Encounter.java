@@ -42,7 +42,11 @@ public class Encounter {
     public void setAppointmentDetails(String appointmentDetails) {
         this.appointmentDetails = appointmentDetails;
     }
-
+    public String getEncounterUniqueId() {
+        
+        String[] arrOfStr = this.appointmentDetails.split(",", 0);  
+        return arrOfStr[0];
+    }
    
 
     public String getStatus() {
