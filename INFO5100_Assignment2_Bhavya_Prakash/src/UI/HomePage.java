@@ -52,6 +52,7 @@ public class HomePage extends javax.swing.JFrame {
     Patient loggedInPatient;
     Doctor loggedInDoctor;
     Admin loggedInAdmin ;
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     public HomePage() {
         initComponents();
        userTypeSelect.setSelectedIndex(0);
@@ -342,6 +343,33 @@ public class HomePage extends javax.swing.JFrame {
         minComboBox = new javax.swing.JComboBox<>();
         timeComboBox = new javax.swing.JComboBox<>();
         jLabel27 = new javax.swing.JLabel();
+        doctorViewProfilePanel = new javax.swing.JPanel();
+        patientNameLabel3 = new javax.swing.JLabel();
+        patientAgeLabel3 = new javax.swing.JLabel();
+        patientGenderLabel3 = new javax.swing.JLabel();
+        patientDOBLabel3 = new javax.swing.JLabel();
+        doctorSpeciality2 = new javax.swing.JLabel();
+        patientPhoneLabel4 = new javax.swing.JLabel();
+        patientPhoneLabel5 = new javax.swing.JLabel();
+        patientEmailLabel3 = new javax.swing.JLabel();
+        patientUsernameLabel3 = new javax.swing.JLabel();
+        patientPasswordLabel3 = new javax.swing.JLabel();
+        patientConfirmPasswordLabel3 = new javax.swing.JLabel();
+        doctorSpeciality3 = new javax.swing.JLabel();
+        doctorUsernameViewLabel = new javax.swing.JLabel();
+        doctorNameViewLabel = new javax.swing.JLabel();
+        doctorAgeViewLabel = new javax.swing.JLabel();
+        doctorEmailViewLabel = new javax.swing.JLabel();
+        doctorGenderViewLabel = new javax.swing.JLabel();
+        doctorDOBViewLabel = new javax.swing.JLabel();
+        doctorSpecialityViewLabel = new javax.swing.JLabel();
+        doctorDegreeViewLabel = new javax.swing.JLabel();
+        doctorContactViewLabel = new javax.swing.JLabel();
+        doctorConfirmPassViewLabel = new javax.swing.JPasswordField();
+        doctorPasswordViewLabel = new javax.swing.JPasswordField();
+        doctorChangePassword = new javax.swing.JButton();
+        doctorAvailabilityViewLabel = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -2171,7 +2199,12 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        manageProfileBtn.setText("Manage Profile");
+        manageProfileBtn.setText("View Profile");
+        manageProfileBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageProfileBtnActionPerformed(evt);
+            }
+        });
 
         doctorLogOutBtn.setText("Log Out");
         doctorLogOutBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -2489,13 +2522,164 @@ public class HomePage extends javax.swing.JFrame {
 
         doctorViewPanel.add(doctorManageAppointmentsPanel, "card3");
 
+        patientNameLabel3.setText("Name");
+
+        patientAgeLabel3.setText("Age");
+
+        patientGenderLabel3.setText("Gender");
+
+        patientDOBLabel3.setText("DOB");
+
+        doctorSpeciality2.setText("Speciality");
+
+        patientPhoneLabel4.setText("Degree");
+
+        patientPhoneLabel5.setText("Contact Number");
+
+        patientEmailLabel3.setText("Contact Email");
+
+        patientUsernameLabel3.setText("Username");
+
+        patientPasswordLabel3.setText("Password");
+
+        patientConfirmPasswordLabel3.setText("Confirm Password");
+
+        doctorSpeciality3.setText("Availability");
+
+        doctorChangePassword.setText("Change Password");
+        doctorChangePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doctorChangePasswordActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Please contact hospital admin to edit you profile details. You can just change your password");
+
+        javax.swing.GroupLayout doctorViewProfilePanelLayout = new javax.swing.GroupLayout(doctorViewProfilePanel);
+        doctorViewProfilePanel.setLayout(doctorViewProfilePanelLayout);
+        doctorViewProfilePanelLayout.setHorizontalGroup(
+            doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                .addGap(116, 116, 116)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                        .addComponent(doctorSpeciality3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                        .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(patientConfirmPasswordLabel3)
+                                    .addComponent(patientPasswordLabel3)
+                                    .addComponent(patientUsernameLabel3)
+                                    .addComponent(patientEmailLabel3)
+                                    .addComponent(patientPhoneLabel5))
+                                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, doctorViewProfilePanelLayout.createSequentialGroup()
+                                        .addGap(81, 81, 81)
+                                        .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(doctorEmailViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(doctorUsernameViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                                        .addGap(33, 33, 33)
+                                        .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(doctorConfirmPassViewLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                                            .addComponent(doctorContactViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(doctorPasswordViewLabel))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(doctorChangePassword))))
+                            .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(patientNameLabel3)
+                                    .addComponent(patientAgeLabel3)
+                                    .addComponent(patientGenderLabel3)
+                                    .addComponent(patientDOBLabel3)
+                                    .addComponent(doctorSpeciality2)
+                                    .addComponent(patientPhoneLabel4))
+                                .addGap(81, 81, 81)
+                                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(doctorDegreeViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorSpecialityViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorDOBViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorGenderViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorAgeViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorNameViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(doctorAvailabilityViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(81, 81, 81))))
+            .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(jLabel34)
+                .addGap(0, 142, Short.MAX_VALUE))
+        );
+        doctorViewProfilePanelLayout.setVerticalGroup(
+            doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel34)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientNameLabel3)
+                    .addComponent(doctorNameViewLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientAgeLabel3)
+                    .addComponent(doctorAgeViewLabel))
+                .addGap(15, 15, 15)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientGenderLabel3)
+                    .addComponent(doctorGenderViewLabel))
+                .addGap(9, 9, 9)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientDOBLabel3)
+                    .addComponent(doctorDOBViewLabel))
+                .addGap(14, 14, 14)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(doctorSpeciality2)
+                    .addComponent(doctorSpecialityViewLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientPhoneLabel4)
+                    .addComponent(doctorDegreeViewLabel))
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(doctorSpeciality3))
+                    .addGroup(doctorViewProfilePanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(doctorAvailabilityViewLabel)))
+                .addGap(18, 18, 18)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientPhoneLabel5)
+                    .addComponent(doctorContactViewLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientEmailLabel3)
+                    .addComponent(doctorEmailViewLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientUsernameLabel3)
+                    .addComponent(doctorUsernameViewLabel))
+                .addGap(15, 15, 15)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientPasswordLabel3)
+                    .addComponent(doctorPasswordViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addGroup(doctorViewProfilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(patientConfirmPasswordLabel3)
+                    .addComponent(doctorConfirmPassViewLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorChangePassword))
+                .addGap(389, 389, 389))
+        );
+
+        doctorViewPanel.add(doctorViewProfilePanel, "card4");
+
         jSplitPane1.setRightComponent(doctorViewPanel);
 
         javax.swing.GroupLayout doctorHomeLayout = new javax.swing.GroupLayout(doctorHome);
         doctorHome.setLayout(doctorHomeLayout);
         doctorHomeLayout.setHorizontalGroup(
             doctorHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
+            .addComponent(jSplitPane1)
         );
         doctorHomeLayout.setVerticalGroup(
             doctorHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3343,6 +3527,13 @@ City cityCombo= new City();
 
     private void updateDoctorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDoctorBtnActionPerformed
         // TODO add your handling code here:
+        String selectedcity = String.valueOf(cityComboBoxDoctor.getSelectedItem());
+        String selectedcommunity = String.valueOf(communityComboBoxDoctor.getSelectedItem());
+        String selectedhospital = String.valueOf(hospitalComboBoxDoctor.getSelectedItem());
+        if("Select any city".equals(selectedcity)||"Select any community".equals(selectedcommunity)||"Select any hospital".equals(selectedhospital)){
+            JOptionPane.showMessageDialog(this,"Select City,Community, and Hospital to add a doctor.");
+             return;
+            }
         try{
             String name = doctorNameTxtField.getText();
             if(name.length()==0 || !validation(name,"^(?![\\s.]+$)[a-zA-Z\\s.]*$")){
@@ -3424,12 +3615,13 @@ City cityCombo= new City();
              JOptionPane.showMessageDialog(this,"Confirm Password does not match the set password");
              return;
             }
-           
+            String address= selectedcity + " , " +selectedcommunity+ " , "+selectedhospital;
        Person person = selectedupdatedoctor.getPerson();
        person.setPersonName(name);
        person.setPersonAge(age);
        person.setPersonGender(gender);
        person.setPersonDOB(dob);
+       person.setPersonAddress(address);
        person.setPersonContactNo(phone);
        person.setPersonContactEmail(email);
        person.setPersonName(username);
@@ -3599,10 +3791,10 @@ City cityCombo= new City();
              JOptionPane.showMessageDialog(this,"Confirm Password does not match the set password");
              return;
             }
-           
+            String address= selectedcity + " , " +selectedcommunity+ " , "+selectedhospital;
             
 //            
-              Person person = new Person(name,age,gender,phone,email,dob,username,password);
+              Person person = new Person(name,age,gender,phone,email,dob,address,username,password);
               personList.addNewPerson(person);
               Doctor doctor = new Doctor(person,speciality,degree,availability);
               hospitalCombo.addDoctorHospital(doctor);
@@ -4061,7 +4253,7 @@ String selectedhospitalByPatient;
              patientViewPulseRate.setText(patientEncounter.getViatlSigns().getPulseRate());
              patientViewAppointmentDetails.setText(patientEncounter.getAppointmentDetails());
              patientViewRespirationRate.setText(patientEncounter.getViatlSigns().getRespirationRate());
-             DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+             
              patientEncounterDate.setText(dateFormat.format(patientEncounter.getEncounterDate()));
              patientViewEncounterTime.setText(patientEncounter.getEncounterTime());
              patientViewSymptoms.setText(patientEncounter.getSymptoms());
@@ -4261,6 +4453,44 @@ String selectedhospitalByPatient;
             houseComboBoxPatient1.setSelectedItem(arrOfStr[2]);
         
     }//GEN-LAST:event_viewPatientProfileBtnActionPerformed
+
+    private void manageProfileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageProfileBtnActionPerformed
+        // TODO add your handling code here:
+        doctorViewPanel.removeAll();
+        doctorViewPanel.add(doctorViewProfilePanel);
+        doctorViewPanel.repaint();
+        doctorViewPanel.revalidate();
+        doctorNameViewLabel.setText(loggedInDoctor.getPerson().getPersonName());
+        doctorAgeViewLabel.setText(String.valueOf(loggedInDoctor.getPerson().getPersonAge()));
+        doctorGenderViewLabel.setText(loggedInDoctor.getPerson().getPersonGender());
+        doctorDOBViewLabel.setText(dateFormat.format(loggedInDoctor.getPerson().getPersonDOB()));
+        doctorSpecialityViewLabel.setText(loggedInDoctor.getSpeciality());
+        doctorDegreeViewLabel.setText(loggedInDoctor.getDegree());
+        doctorAvailabilityViewLabel.setText(loggedInDoctor.getAvailability());
+        doctorContactViewLabel.setText(loggedInDoctor.getPerson().getPersonContactNo());
+        doctorEmailViewLabel.setText(loggedInDoctor.getPerson().getPersonContactEmail());
+        doctorUsernameViewLabel.setText(loggedInDoctor.getPerson().getUsername());
+        doctorPasswordViewLabel.setText(loggedInDoctor.getPerson().getPassword());
+        doctorConfirmPassViewLabel.setText(loggedInDoctor.getPerson().getPassword());
+        
+        
+    }//GEN-LAST:event_manageProfileBtnActionPerformed
+
+    private void doctorChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorChangePasswordActionPerformed
+        // TODO add your handling code here:
+        String password = doctorPasswordViewLabel.getText();
+             if(password.length()==0 || !validation(password,"^(?![\\s.]+$)[a-zA-Z0-9@#$]*$")){
+             JOptionPane.showMessageDialog(this,"Invalid Password.Only A-Z,a-z,0-9,@,and # are allowed");
+             return;
+            }
+            String confirmPassword = doctorConfirmPassViewLabel.getText();
+            if(!(confirmPassword.equals(password))){
+             JOptionPane.showMessageDialog(this,"Confirm Password does not match the set password");
+             return;
+            }
+            loggedInDoctor.getPerson().setPassword(doctorPasswordViewLabel.getText());
+                
+    }//GEN-LAST:event_doctorChangePasswordActionPerformed
     public void clearappointmentListTableFields(){
              patientViewEncounterId.setText("");
              patientViewBloodPressure.setText("");
@@ -4476,25 +4706,41 @@ String selectedhospitalByPatient;
     private javax.swing.JButton deleteDoctorBtn;
     private javax.swing.JButton deletePatientProfileBtn;
     private javax.swing.JTextField doctorAgeTxtField;
+    private javax.swing.JLabel doctorAgeViewLabel;
     private javax.swing.JTextField doctorAvailabilityTxtField;
+    private javax.swing.JLabel doctorAvailabilityViewLabel;
+    private javax.swing.JButton doctorChangePassword;
+    private javax.swing.JPasswordField doctorConfirmPassViewLabel;
     private javax.swing.JPasswordField doctorConfirmsPasswordTxtField;
+    private javax.swing.JLabel doctorContactViewLabel;
     private javax.swing.JPanel doctorControlPanel;
     private com.toedter.calendar.JDateChooser doctorDOB;
+    private javax.swing.JLabel doctorDOBViewLabel;
     private javax.swing.JTextField doctorDegreeTxtField;
+    private javax.swing.JLabel doctorDegreeViewLabel;
     private javax.swing.JTextField doctorEmailTxtField;
+    private javax.swing.JLabel doctorEmailViewLabel;
+    private javax.swing.JLabel doctorGenderViewLabel;
     private javax.swing.JPanel doctorHome;
     private javax.swing.JPanel doctorHomePanel;
     private javax.swing.JButton doctorLogOutBtn;
     private javax.swing.JPanel doctorManageAppointmentsPanel;
     private javax.swing.JTextField doctorNameTxtField;
+    private javax.swing.JLabel doctorNameViewLabel;
+    private javax.swing.JPasswordField doctorPasswordViewLabel;
     private javax.swing.JTextField doctorPhoneTxtField;
     private javax.swing.JPasswordField doctorSetPasswordTxtField;
     private javax.swing.JTextField doctorSetUsernameTxtField;
     private javax.swing.JLabel doctorSpeciality;
     private javax.swing.JLabel doctorSpeciality1;
+    private javax.swing.JLabel doctorSpeciality2;
+    private javax.swing.JLabel doctorSpeciality3;
     private javax.swing.JTextField doctorSpecialityTxtField;
+    private javax.swing.JLabel doctorSpecialityViewLabel;
     private javax.swing.JTable doctorTable;
+    private javax.swing.JLabel doctorUsernameViewLabel;
     private javax.swing.JPanel doctorViewPanel;
+    private javax.swing.JPanel doctorViewProfilePanel;
     private com.toedter.calendar.JDateChooser encounterDateChooser;
     private javax.swing.JTable encounterTable;
     private javax.swing.JRadioButton femaleRadio;
@@ -4537,6 +4783,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -4585,6 +4832,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientAgeLabel;
     private javax.swing.JLabel patientAgeLabel1;
     private javax.swing.JLabel patientAgeLabel2;
+    private javax.swing.JLabel patientAgeLabel3;
     private javax.swing.JTextField patientAgeTxtField;
     private javax.swing.JTextField patientAgeTxtField1;
     private javax.swing.JTextField patientBloodPressureTxtField;
@@ -4596,6 +4844,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientConfirmPasswordLabel;
     private javax.swing.JLabel patientConfirmPasswordLabel1;
     private javax.swing.JLabel patientConfirmPasswordLabel2;
+    private javax.swing.JLabel patientConfirmPasswordLabel3;
     private javax.swing.JPasswordField patientConfirmsPasswordTxtField;
     private javax.swing.JPasswordField patientConfirmsPasswordTxtField1;
     private javax.swing.JPanel patientControlPanel;
@@ -4604,6 +4853,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientDOBLabel;
     private javax.swing.JLabel patientDOBLabel1;
     private javax.swing.JLabel patientDOBLabel2;
+    private javax.swing.JLabel patientDOBLabel3;
     private javax.swing.JLabel patientDetailsAgeLabel;
     private javax.swing.JLabel patientDetailsEmailLabel;
     private javax.swing.JLabel patientDetailsGenderLabel;
@@ -4614,6 +4864,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientEmailLabel;
     private javax.swing.JLabel patientEmailLabel1;
     private javax.swing.JLabel patientEmailLabel2;
+    private javax.swing.JLabel patientEmailLabel3;
     private javax.swing.JTextField patientEmailTxtField;
     private javax.swing.JTextField patientEmailTxtField1;
     private javax.swing.JLabel patientEncounterDate;
@@ -4621,6 +4872,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientGenderLabel;
     private javax.swing.JLabel patientGenderLabel1;
     private javax.swing.JLabel patientGenderLabel2;
+    private javax.swing.JLabel patientGenderLabel3;
     private javax.swing.JPanel patientHome;
     private javax.swing.JButton patientHomeBtn;
     private javax.swing.JPanel patientHomePanel;
@@ -4635,15 +4887,19 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientNameLabel;
     private javax.swing.JLabel patientNameLabel1;
     private javax.swing.JLabel patientNameLabel2;
+    private javax.swing.JLabel patientNameLabel3;
     private javax.swing.JTextField patientNameTxtField;
     private javax.swing.JTextField patientNameTxtField1;
     private javax.swing.JLabel patientPasswordLabel;
     private javax.swing.JLabel patientPasswordLabel1;
     private javax.swing.JLabel patientPasswordLabel2;
+    private javax.swing.JLabel patientPasswordLabel3;
     private javax.swing.JLabel patientPhoneLabel;
     private javax.swing.JLabel patientPhoneLabel1;
     private javax.swing.JLabel patientPhoneLabel2;
     private javax.swing.JLabel patientPhoneLabel3;
+    private javax.swing.JLabel patientPhoneLabel4;
+    private javax.swing.JLabel patientPhoneLabel5;
     private javax.swing.JTextField patientPhoneTxtField;
     private javax.swing.JTextField patientPhoneTxtField1;
     private javax.swing.JTextField patientPulseTxtField;
@@ -4660,6 +4916,7 @@ String selectedhospitalByPatient;
     private javax.swing.JLabel patientUsernameLabel;
     private javax.swing.JLabel patientUsernameLabel1;
     private javax.swing.JLabel patientUsernameLabel2;
+    private javax.swing.JLabel patientUsernameLabel3;
     private javax.swing.JLabel patientViewAppointmentDetails;
     private javax.swing.JLabel patientViewBloodPressure;
     private javax.swing.JLabel patientViewBodyTemperature;

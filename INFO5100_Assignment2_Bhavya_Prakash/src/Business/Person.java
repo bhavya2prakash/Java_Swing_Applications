@@ -40,12 +40,13 @@ public class Person {
 
     
 
-    public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, Date personDOB, String username, String password) {
+    public Person(String personName, int personAge, String personGender, String personContactNo, String personContactEmail, Date personDOB, String personAddress,String username, String password) {
         this.personName = personName;
         this.personAge = personAge;
         this.personGender = personGender;
         this.personContactNo = personContactNo;
         this.personContactEmail = personContactEmail;
+        this.personAddress = personAddress;
         this.personDOB = personDOB;
         this.username = username;
         this.password = password;
