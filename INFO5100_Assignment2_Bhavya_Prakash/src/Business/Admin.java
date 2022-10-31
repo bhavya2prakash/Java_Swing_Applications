@@ -19,7 +19,7 @@ public class Admin {
         this.community=community;
         this.person = person;
     }
-    public Admin(Hospital hospital,Person person) {
+    public Admin(Person person,Hospital hospital) {
         this.hospital=hospital;
         this.person = person;
     }

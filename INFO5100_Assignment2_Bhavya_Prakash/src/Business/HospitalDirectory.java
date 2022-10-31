@@ -30,6 +30,11 @@ public class HospitalDirectory {
         hospitalList.add(newHospital);
         return newHospital;
     }
+     public void  addNewwHospital(Hospital newHospital){
+        
+        hospitalList.add(newHospital);
+       
+    }
     
      public void deleteHospital(Hospital hospital){
         this.hospitalList.remove(hospital);

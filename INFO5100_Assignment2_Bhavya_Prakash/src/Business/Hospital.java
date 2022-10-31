@@ -12,6 +12,12 @@ public class Hospital {
     String hospitalName;
     private Admin hospitalAdmin;
     private DoctorDirectory doctorList;
+
+    public Hospital(String hospitalName) {
+        this.hospitalName = hospitalName;
+        this.doctorList=new DoctorDirectory();
+    }
+    
     public Hospital(){
         this.doctorList=new DoctorDirectory();
     }

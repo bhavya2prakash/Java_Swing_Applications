@@ -20,6 +20,7 @@ public class Initializer {
         Community community1 = city1.addNewCommunity();
         community1.setCommunityName("Alliston");
         Person person1 = new Person("communityone","communityone");
+        system.personList.addNewPerson(person1);
         Admin communityAdmin1 = new Admin(community1,person1);
         community1.setAdmin(communityAdmin1);
         House house1 = community1.addNewHouse(); 
@@ -31,6 +32,7 @@ public class Initializer {
         Community community2 = city1.addNewCommunity();
         community2.setCommunityName("Back Bay");
         Person person2 = new Person("communitytwo","communitytwo");
+        system.personList.addNewPerson(person2);
         Admin communityAdmin2 = new Admin(community2,person2);
         community2.setAdmin(communityAdmin2);
         House house4 = community2.addNewHouse(); 
@@ -42,6 +44,7 @@ public class Initializer {
         Community community3 = city1.addNewCommunity();
         community3.setCommunityName("North End");
         Person person3 = new Person("communitythree","communitythree");
+        system.personList.addNewPerson(person3);
         Admin communityAdmin3 = new Admin(community3,person3);
         community3.setAdmin(communityAdmin3);
         House house7 = community3.addNewHouse(); 
@@ -53,6 +56,7 @@ public class Initializer {
         Community community4 = city2.addNewCommunity();
         community4.setCommunityName("Harvard Square");
         Person person4 = new Person("communityfour","communityfour");
+        system.personList.addNewPerson(person4);
         Admin communityAdmin4 = new Admin(community4,person4);
         community4.setAdmin(communityAdmin4);
         House house10 = community4.addNewHouse(); 
@@ -64,6 +68,7 @@ public class Initializer {
         Community community5 = city2.addNewCommunity();
         community5.setCommunityName("Riverside");
         Person person5 = new Person("communityfive","communityfive");
+        system.personList.addNewPerson(person5);
         Admin communityAdmin5 = new Admin(community5,person5);
         community5.setAdmin(communityAdmin5);
         House house13 = community5.addNewHouse(); 
@@ -75,6 +80,7 @@ public class Initializer {
         Community community6 = city2.addNewCommunity();
         community6.setCommunityName("Peabody");
         Person person6 = new Person("communitysix","communitysix");
+        system.personList.addNewPerson(person6);
         Admin communityAdmin6 = new Admin(community6,person6);
         community6.setAdmin(communityAdmin6);
         House house16 = community6.addNewHouse(); 
@@ -86,6 +92,7 @@ public class Initializer {
         Community community7 = city3.addNewCommunity();
         community7.setCommunityName("Belvidere");
         Person person7 = new Person("communityseven","communityseven");
+        system.personList.addNewPerson(person7);
         Admin communityAdmin7 = new Admin(community7,person7);
         community7.setAdmin(communityAdmin7);
         House house19 = community7.addNewHouse(); 
@@ -97,6 +104,7 @@ public class Initializer {
         Community community8 = city3.addNewCommunity();
         community8.setCommunityName("Centralville");
         Person person8 = new Person("communityeight","communityeight");
+        system.personList.addNewPerson(person8);
         Admin communityAdmin8 = new Admin(community8,person8);
         community8.setAdmin(communityAdmin8);
          House house22 = community8.addNewHouse(); 
@@ -108,6 +116,7 @@ public class Initializer {
         Community community9 = city3.addNewCommunity();
         community9.setCommunityName("Downtown");
         Person person9 = new Person("communitynine","communitynine");
+        system.personList.addNewPerson(person9);
         Admin communityAdmin9 = new Admin(community9,person9);
         community9.setAdmin(communityAdmin9);
         House house25 = community9.addNewHouse(); 
@@ -116,7 +125,59 @@ public class Initializer {
         house26.setHouseName("200 Market St Unit 3316,Zipcode:01852");
         House house27 = community9.addNewHouse(); 
         house27.setHouseName("172 Middle St Apt 405,Zipcode:01852");
-        
+         
+        HospitalDirectory hospitalList1 =community1.getHospitalList();
+        Hospital h1 = new Hospital("St.Elizabeth Medical Center");
+        hospitalList1.addNewwHospital(h1);
+        Person personh1 = new Person("hospitalone","hospitalone");
+        system.personList.addNewPerson(personh1);
+        Admin admin = new Admin(personh1,h1);
+        h1.setHospitalAdmin(admin);
+        Hospital h2 = new Hospital("Beth Israel Deaconess Medical Center");
+        hospitalList1.addNewwHospital(h2);
+        Person personh2 = new Person("hospitaltwo","hospitaltwo");
+        Admin admin2 = new Admin(personh2,h2);
+        h2.setHospitalAdmin(admin2);
+        HospitalDirectory hospitalList2 =community2.getHospitalList();
+        Hospital h3 = new Hospital("Boston Medical Center");
+        hospitalList2.addNewwHospital(h3);
+        Person personh3 = new Person("hospitalthree","hospitalthree");
+        system.personList.addNewPerson(personh3);
+        Admin admin3 = new Admin(personh3,h3);
+        h3.setHospitalAdmin(admin3);
+        Hospital h4 = new Hospital("Mass General Hospital Back Bay");
+        hospitalList2.addNewwHospital(h4);
+        Person personh4= new Person("hospitalfour","hospitalfour");
+        system.personList.addNewPerson(personh4);
+        Admin admin4 = new Admin(personh4,h4);
+        h4.setHospitalAdmin(admin4);
+        HospitalDirectory hospitalList3 =community3.getHospitalList();
+        Hospital h5 = new Hospital("North End Waterfront Health");
+        hospitalList3.addNewwHospital(h5);
+        Person personh5 = new Person("hospitalfive","hospitalfive");
+        Admin admin5 = new Admin(personh5,h5);
+        system.personList.addNewPerson(personh5);
+        h5.setHospitalAdmin(admin5);
+        Hospital h6 = new Hospital("Tufts Medical Center");
+        hospitalList3.addNewwHospital(h6);
+        Person personh6= new Person("hospitalsix","hospitalsix");
+        system.personList.addNewPerson(personh6);
+        Admin admin6 = new Admin(personh6,h6);
+        h4.setHospitalAdmin(admin6);
+        HospitalDirectory hospitalList4 =community4.getHospitalList();
+        Hospital h7 = new Hospital("Harvard Square Clinic");
+        hospitalList4.addNewwHospital(h7);
+        Person personh7 = new Person("hospitalseven","hospitalseven");
+        system.personList.addNewPerson(personh7);
+        Admin admin7 = new Admin(personh7,h7);
+        h7.setHospitalAdmin(admin7);
+        Hospital h8 = new Hospital("Mount Auburn Hospital");
+        hospitalList4.addNewwHospital(h8);
+        Person personh8= new Person("hospitaleight","hospitalseghtn");
+        system.personList.addNewPerson(personh8);
+        Admin admin8 = new Admin(personh8,h8);
+        h4.setHospitalAdmin(admin8);
+       
         
         return system;
         
