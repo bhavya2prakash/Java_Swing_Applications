@@ -89,7 +89,7 @@
                               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="748" max="32767" attributes="0"/>
+                      <EmptySpace pref="756" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -266,7 +266,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="56" max="32767" attributes="0"/>
+                      <EmptySpace min="56" pref="607" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="registrationLabel" min="-2" pref="343" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
@@ -900,6 +900,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="welcomePatient" min="-2" pref="272" max="-2" attributes="0"/>
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -934,30 +935,23 @@
                                               <Component id="patientViewAppointmentDetails" alignment="0" min="-2" pref="223" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="viewAppointmentDetailsBtn" linkSize="8" min="-2" pref="270" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="appointmentDeleteBtn" linkSize="8" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jScrollPane7" alignment="0" min="-2" pref="575" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="viewAppointmentDetailsBtn" linkSize="8" min="-2" pref="270" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                          <Component id="appointmentDeleteBtn" linkSize="8" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="jScrollPane7" alignment="0" min="-2" pref="739" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="618" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="welcomePatient" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
+                                  <EmptySpace pref="541" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Component id="welcomePatient" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jScrollPane7" min="-2" pref="122" max="-2" attributes="0"/>
@@ -1266,7 +1260,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="432" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="bookAppointmentBtn" alignment="0" min="-2" pref="299" max="-2" attributes="0"/>
                                       <Component id="jLabel30" alignment="0" min="-2" pref="524" max="-2" attributes="0"/>
@@ -1527,7 +1521,7 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="242" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="patientGenderLabel2" min="-2" max="-2" attributes="0"/>
@@ -2202,7 +2196,7 @@
                                       <Component id="welcomeAdmin2" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="welcomeAdmin3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="794" max="32767" attributes="0"/>
+                                  <EmptySpace pref="802" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2450,7 +2444,7 @@
                               <Component id="jLabel35" min="-2" pref="183" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="852" max="32767" attributes="0"/>
+                      <EmptySpace pref="860" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2655,7 +2649,7 @@
                               <Component id="citiesComboBox" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="612" max="32767" attributes="0"/>
+                      <EmptySpace min="612" pref="911" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2692,7 +2686,7 @@
                           <Component id="updateCommunityBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="deleteCommunityBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="405" max="32767" attributes="0"/>
+                      <EmptySpace pref="411" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2731,7 +2725,7 @@
             <Component class="javax.swing.JComboBox" name="citiesComboBox">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -2752,7 +2746,7 @@
             <Component class="javax.swing.JButton" name="addCommunityBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add a new Community"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2810,7 +2804,7 @@
             <Component class="javax.swing.JButton" name="updateCommunityBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Update"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2829,7 +2823,7 @@
             <Component class="javax.swing.JButton" name="deleteCommunityBtn">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Delete"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -2873,46 +2867,49 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+                      <EmptySpace min="370" pref="370" max="-2" attributes="0"/>
+                      <Component id="updateHospitalBtn" linkSize="13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="hospitalDeleteBtn" linkSize="13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="786" pref="786" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane4" alignment="0" pref="1214" max="32767" attributes="0"/>
-                          <Component id="communityComboBoxHospital" alignment="0" max="32767" attributes="0"/>
-                          <Component id="cityComboBoxHospital" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="addHospitalAdminUsernameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="addHospitalLabel" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="addHospitalAdminPasswordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="addHospitalAdminPasswordLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="addHospitalBtn" linkSize="13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="addHospitalAdminUsernameLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="addHospitalLabel" min="-2" pref="182" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="addHospitalTxtField" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="addHospitalAdminUsernameTxtField" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="addHospitalAdminPasswordTxtField1" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="addHospitalAdminPasswordTxtField" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jScrollPane4" pref="592" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="addHospitalAdminUsernameTxtField" max="32767" attributes="0"/>
-                                  <Component id="addHospitalTxtField" max="32767" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="858" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="addHospitalBtn" linkSize="13" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                      <Component id="updateHospitalBtn" linkSize="13" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="hospitalDeleteBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="communityComboBoxHospital" pref="626" max="32767" attributes="0"/>
+                                  <Component id="cityComboBoxHospital" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="addHospitalAdminPasswordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="addHospitalAdminPasswordLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="addHospitalAdminPasswordTxtField1" max="32767" attributes="0"/>
-                                  <Component id="addHospitalAdminPasswordTxtField" max="32767" attributes="0"/>
-                              </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel36" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2921,11 +2918,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="cityComboBoxHospital" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="communityComboBoxHospital" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="communityComboBoxHospital" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                       <Component id="jScrollPane4" min="-2" pref="124" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="addHospitalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="addHospitalTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2945,15 +2944,13 @@
                           <Component id="addHospitalAdminPasswordLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="addHospitalAdminPasswordTxtField1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="2" attributes="0">
-                              <Component id="addHospitalBtn" alignment="2" min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="updateHospitalBtn" alignment="2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="hospitalDeleteBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="updateHospitalBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hospitalDeleteBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addHospitalBtn" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="345" max="32767" attributes="0"/>
+                      <EmptySpace pref="353" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2962,7 +2959,7 @@
             <Component class="javax.swing.JComboBox" name="cityComboBoxHospital">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -2983,7 +2980,7 @@
             <Component class="javax.swing.JComboBox" name="communityComboBoxHospital">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3090,7 +3087,18 @@
             </Component>
             <Component class="javax.swing.JButton" name="hospitalDeleteBtn">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Georgia" size="14" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Delete"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hospitalDeleteBtnActionPerformed"/>
@@ -3126,6 +3134,14 @@
                 <Property name="text" type="java.lang.String" value="Confirm Password"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel36">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Georgia" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="jLabel6"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="manageHousesPanel">
@@ -3143,32 +3159,31 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="communityComboBoxHouse" alignment="0" max="32767" attributes="0"/>
-                          <Component id="cityComboBoxHouse" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="addHouseBtn" min="-2" pref="154" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
-                                      <Component id="houseUpdateBtn" linkSize="14" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="addHouseLabel" min="-2" pref="188" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="addHouseTxtField" min="-2" pref="234" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="jScrollPane3" alignment="0" min="-2" pref="560" max="-2" attributes="0"/>
-                                  </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="cityComboBoxHouse" pref="642" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="addHouseLabel" min="-2" pref="256" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="addHouseTxtField" min="-2" pref="234" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="226" max="32767" attributes="0"/>
-                              <Component id="houseDeleteBtn" linkSize="14" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="addHouseBtn" min="-2" pref="154" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Component id="houseUpdateBtn" linkSize="14" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="houseDeleteBtn" linkSize="14" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jScrollPane3" alignment="0" min="-2" pref="560" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="communityComboBoxHouse" alignment="1" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="jLabel6" min="-2" pref="560" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="513" max="32767" attributes="0"/>
+                      <EmptySpace pref="804" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3179,7 +3194,9 @@
                       <Component id="cityComboBoxHouse" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="communityComboBoxHouse" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="124" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -3192,7 +3209,7 @@
                           <Component id="houseUpdateBtn" alignment="2" min="-2" max="-2" attributes="0"/>
                           <Component id="houseDeleteBtn" alignment="2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="396" max="32767" attributes="0"/>
+                      <EmptySpace pref="401" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3230,7 +3247,7 @@
             <Component class="javax.swing.JComboBox" name="cityComboBoxHouse">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3251,7 +3268,7 @@
             <Component class="javax.swing.JComboBox" name="communityComboBoxHouse">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3346,6 +3363,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="houseDeleteBtnActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Georgia" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="jLabel6"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="manageDoctorsPanel">
@@ -3378,6 +3403,8 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="hospitalComboBoxDoctor" min="-2" pref="399" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel47" min="-2" pref="448" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
@@ -3443,7 +3470,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="685" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3455,10 +3482,13 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="communityComboBoxDoctor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="hospitalComboBoxDoctor" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="hospitalComboBoxDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel47" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane13" min="-2" pref="92" max="-2" attributes="0"/>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace pref="21" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="patientNameLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="doctorNameTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3513,7 +3543,7 @@
                           <Component id="doctorConfirmsPasswordTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="deleteDoctorBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="235" max="32767" attributes="0"/>
+                      <EmptySpace pref="239" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3522,7 +3552,7 @@
             <Component class="javax.swing.JComboBox" name="cityComboBoxDoctor">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3543,7 +3573,7 @@
             <Component class="javax.swing.JComboBox" name="communityComboBoxDoctor">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3564,7 +3594,7 @@
             <Component class="javax.swing.JComboBox" name="hospitalComboBoxDoctor">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
+                  <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -3790,8 +3820,8 @@
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="3" rowCount="4">
                         <Column editable="true" title="Sno" type="java.lang.Object"/>
-                        <Column editable="true" title="Doctor Name" type="java.lang.Object"/>
                         <Column editable="true" title="Doctor Id" type="java.lang.Object"/>
+                        <Column editable="true" title="Doctor Name" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -3824,6 +3854,14 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="jLabel47">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Georgia" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="jLabel6"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="communityAdminHouse">
@@ -3868,8 +3906,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="manageCommunityBttn" linkSize="20" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="manageHospitalBtnn" linkSize="20" alignment="2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="manageHospitalBtnn" linkSize="20" alignment="2" min="-2" pref="121" max="-2" attributes="0"/>
                                   <Component id="manageHospitalBttn" linkSize="20" alignment="2" min="-2" max="-2" attributes="0"/>
                                   <Component id="logoutCommunityAdmin" linkSize="20" alignment="2" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -3878,7 +3915,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel43" min="-2" pref="151" max="-2" attributes="0"/>
-                              <EmptySpace pref="10" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3887,9 +3924,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="manageCommunityBttn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                               <Component id="manageHospitalBtnn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="manageHospitalBttn" min="-2" max="-2" attributes="0"/>
@@ -3901,19 +3936,6 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="manageCommunityBttn">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Georgia" size="14" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Manage Community"/>
-                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
-                          </Border>
-                        </Property>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JButton" name="manageHospitalBtnn">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -3992,7 +4014,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
                               <Component id="welcomecommunityAdmin" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="824" max="32767" attributes="0"/>
+                              <EmptySpace pref="836" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4031,12 +4053,26 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSplitPane1" alignment="0" pref="1548" max="32767" attributes="0"/>
+                  <Component id="jSplitPane1" alignment="0" pref="1556" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jSplitPane4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jSplitPane1" alignment="0" pref="785" max="32767" attributes="0"/>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jSplitPane4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -4060,30 +4096,36 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="2" attributes="0">
-                                  <Component id="doctorLogOutBtn" linkSize="21" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="manageProfileBtn" linkSize="21" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="addEncounterDetailsBtn" linkSize="21" alignment="2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel44" alignment="2" min="-2" pref="151" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="709" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="jLabel44" min="-2" pref="151" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                              <Component id="addEncounterDetailsBtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                              <Component id="manageProfileBtn" min="-2" pref="144" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                              <Component id="doctorLogOutBtn" min="-2" pref="144" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="66" pref="66" max="-2" attributes="0"/>
                               <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                              <EmptySpace min="67" pref="67" max="-2" attributes="0"/>
                               <Component id="addEncounterDetailsBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
                               <Component id="manageProfileBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <EmptySpace min="38" pref="38" max="-2" attributes="0"/>
                               <Component id="doctorLogOutBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="115" max="32767" attributes="0"/>
+                              <EmptySpace pref="112" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4191,7 +4233,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                                   <Component id="welcomeDoctor" min="-2" pref="422" max="-2" attributes="0"/>
-                                  <EmptySpace pref="168" max="32767" attributes="0"/>
+                                  <EmptySpace pref="200" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4200,7 +4242,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
                                   <Component id="welcomeDoctor" min="-2" pref="55" max="-2" attributes="0"/>
-                                  <EmptySpace pref="551" max="32767" attributes="0"/>
+                                  <EmptySpace pref="577" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4246,21 +4288,14 @@
                                                   </Group>
                                                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="doctorAvailabilityViewLabel" max="32767" attributes="0"/>
-                                                              <Component id="doctorContactViewLabel" max="32767" attributes="0"/>
-                                                              <Component id="doctorEmailViewLabel" max="32767" attributes="0"/>
-                                                              <Component id="doctorConfirmPassViewLabel" pref="220" max="32767" attributes="0"/>
-                                                              <Component id="doctorPasswordViewLabel" alignment="0" max="32767" attributes="0"/>
-                                                          </Group>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Component id="doctorChangePassword" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="doctorAvailabilityViewLabel" max="32767" attributes="0"/>
+                                                          <Component id="doctorContactViewLabel" max="32767" attributes="0"/>
+                                                          <Component id="doctorEmailViewLabel" max="32767" attributes="0"/>
+                                                          <Component id="doctorConfirmPassViewLabel" pref="220" max="32767" attributes="0"/>
+                                                          <Component id="doctorPasswordViewLabel" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="doctorUsernameViewLabel" min="-2" pref="108" max="-2" attributes="0"/>
-                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                      </Group>
+                                                      <Component id="doctorUsernameViewLabel" min="-2" pref="108" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
@@ -4281,13 +4316,13 @@
                                                       <Component id="doctorGenderViewLabel" min="-2" pref="108" max="-2" attributes="0"/>
                                                       <Component id="doctorNameViewLabel" min="-2" pref="177" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="doctorChangePassword" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                                               <Component id="doctorSpeciality3" min="-2" max="-2" attributes="0"/>
                                           </Group>
@@ -4346,7 +4381,7 @@
                                       <Component id="patientPhoneLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="doctorContactViewLabel" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="8" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="patientEmailLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="doctorEmailViewLabel" alignment="1" min="-2" pref="17" max="-2" attributes="0"/>
@@ -4371,9 +4406,10 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="patientConfirmPasswordLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="doctorConfirmPassViewLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="doctorChangePassword" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="389" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="doctorChangePassword" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="347" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4580,14 +4616,14 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="patientBodyTempTxtField" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                                              <Component id="patientBloodPressureTxtField" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                                              <Component id="encounterDateChooser" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="patientBodyTempTxtField" linkSize="23" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                                              <Component id="patientBloodPressureTxtField" linkSize="23" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                                                               <Component id="patientSymptomsTxtField" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                                              <Component id="encounterDateChooser" linkSize="23" min="-2" pref="140" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="103" groupAlignment="0" attributes="0">
                                                               <Group type="102" alignment="0" attributes="0">
-                                                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                                       <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                                                                       <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4595,7 +4631,7 @@
                                                                   </Group>
                                                               </Group>
                                                               <Group type="102" alignment="0" attributes="0">
-                                                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                                                   <Component id="patientEncounterSaveBtn" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
@@ -4732,7 +4768,7 @@
                                       <Component id="jLabel24" alignment="2" min="-2" max="-2" attributes="0"/>
                                       <Component id="patientDiagnosisTxtField" alignment="2" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace pref="33" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="hrComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4746,7 +4782,7 @@
                                       <Component id="patientSymptomsTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="patientEncounterSaveBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="157" max="32767" attributes="0"/>
+                                  <EmptySpace pref="170" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -5113,6 +5149,10 @@
                 </Container>
               </SubComponents>
             </Container>
+            <Container class="javax.swing.JSplitPane" name="jSplitPane4">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout"/>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="communityAdminHome">
@@ -5125,7 +5165,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSplitPane2" alignment="0" pref="1548" max="32767" attributes="0"/>
+                  <Component id="jSplitPane2" alignment="0" pref="1556" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -5268,7 +5308,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSplitPane3" alignment="0" pref="1548" max="32767" attributes="0"/>
+                  <Component id="jSplitPane3" alignment="0" pref="1556" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -5391,11 +5431,6 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="75" pref="75" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -5461,7 +5496,7 @@
                               <Component id="otherRadio3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="633" max="32767" attributes="0"/>
+                      <EmptySpace pref="641" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -5533,9 +5568,7 @@
                           <Component id="updatePatientAdminBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="191" max="32767" attributes="0"/>
-                      <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <EmptySpace pref="280" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -5770,11 +5803,6 @@
                   <Font name="Georgia" size="14" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Confirm Password"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="jLabel36">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="username cannnot be updated"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="updatePatientAdminBtn">

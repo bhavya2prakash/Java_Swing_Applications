@@ -19,7 +19,7 @@ public class Encounter {
     private String encounterTime;
     private String diagnosis;
     private String symptoms;
-    private String status = "Appointment Request Pending";
+    private String status = "Appointment Scheduled";
 
     public Encounter(String appointmentDetails) {
         this.encounterId=i;
