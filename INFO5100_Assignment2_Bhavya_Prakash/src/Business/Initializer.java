@@ -137,6 +137,7 @@ public class Initializer {
         hospitalList1.addNewwHospital(h2);
         Person personh2 = new Person("hospitaltwo","hospitaltwo");
         Admin admin2 = new Admin(personh2,h2);
+        system.personList.addNewPerson(personh2);
         h2.setHospitalAdmin(admin2);
         HospitalDirectory hospitalList2 =community2.getHospitalList();
         Hospital h3 = new Hospital("Boston Medical Center");
